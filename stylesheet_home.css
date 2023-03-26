@@ -7,31 +7,34 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 .header {
-  padding: 34%; /* some padding */
+  padding: 30%; /* some padding */
   font-size: 2.5em;
   text-align: center; /* center the text */
   color: white; 
-  height: 360px;
+  height: 100%;
+  width: 100%;
   background-image: url("image/colosseo.jpg");
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  
 }
 
 .topnav {
-  position: relative;
-  background-color: #1C1C1C;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1C1C1C; 
+ 
 }
-
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 13px 16px;
