@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  padding: 80px; /* some padding */
+  font-size: 2.5em;
+  text-align: center; /* center the text */
+  color: white; 
+  height: 350px;
+  background-image: url("image/colosseo.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.topnav {
+  position: relative;
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 13px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #8f9294;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #9a6608;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.nav {
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.search-bar {
+  width: 250px;
+  height: 45px;
+  background: transparent;
+  border: 2px solid #e4e4e4;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #e4e4e4;
+}
+
+.search-bar input::placeholder {
+  color: #e4e4e4;
+}
+
+.search-bar button{
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-bar button i{
+  font-size: 22px;
+  color: #e4e4e4;
+}
+
+/*3D OBJECT*/
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#Model {
+    position: sticky;
+    left: 0;
+    top: 0;
+    transform: translateX(-20%);
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ari_pods_model {
+    position: sticky;
+    top: 10%;
+}
+
+.ari_pods,
+.beats,
+.apple_watch {
+    width: 100%;
+    padding: 0 80px;
+}
+
+.section_container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ari_pods {
+    background-color: #1C1C1C;
+}
+
+.beats {
+    background-color: #fff;
+}
+
+.apple_watch {
+    background-color: #92B7FF;
+}
+
+.model_section {
+    width: 400px;
+}
+
+.text {
+    width: 350px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: left;
+    margin: 120px;
+}
+
+.text > .title {
+    font-size: 82px; 
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.ari_pods > .section_container > .text {
+    color: #fff;
+}
+
+.text > .description {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.beats > .section_container > .model_section {
+    order: 2;
+    width: 500px;
+}
+
+.beats > .text {
+    color: #000;
+}
