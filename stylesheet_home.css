@@ -12,7 +12,7 @@
   font-size: 2.5em;
   text-align: center; /* center the text */
   color: white; 
-  height: 350px;
+  height: 360px;
   background-image: url("image/colosseo.jpg");
   background-color: #cccccc;
   background-position: center;
@@ -23,7 +23,7 @@
 
 .topnav {
   position: relative;
-  background-color: #333;
+  background-color: #1C1C1C;
   overflow: hidden;
 }
 
@@ -112,13 +112,6 @@ body {
     padding: 0;
 }
 
-#Model {
-    position: sticky;
-    left: 0;
-    top: 0;
-    transform: translateX(-20%);
-}
-
 .sections {
     display: flex;
     justify-content: space-between;
@@ -190,4 +183,73 @@ body {
 
 .beats > .text {
     color: #000;
+}
+
+.image {
+  border-radius: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.image1 {
+  position: relative;
+  width: 50%;
+}
+.image1:hover .image {
+  opacity: 0.3;
+}
+
+.image1:hover .middle {
+  opacity: 1;
+}
+
+.text1 {
+  background-color: #c28e16;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
