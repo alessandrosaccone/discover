@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="bootstrap" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>Homepage</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Discover</h1>
+        <p>Go wherever you want</p>
+      </div>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#guide">Guide</a>
         <a href="#monumenti">Monumenti</a>
         <a href="#contatti">Contact</a>
         <a href="#about">About</a>
-      </div> 
+        <a href="#login">Login</a>
+        <div class="topnav-right">
+            <form action="#" class="search-bar">
+                <input type="text" placeholder="Search..." class="nav">
+                <button type="submit"><i class='bx bx-search'></i></button>
+            </form>
+        </div>
+    </div>
+    
+    <section class="main">
+        <div class="wrapper">
+            <div class="left-col">
+                <div class="status-wrapper">
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="img/cover 1.png" alt=""></div>
+                        <p class="username">user_name_1</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="img/cover 2.png" alt=""></div>
+                        <p class="username">user_name_2</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="img/cover 3.png" alt=""></div>
+                        <p class="username">user_name_3</p>
+                    </div>
+                    // +5 more status card elements.
+            </div>
+        </div>
+    </section>
+    
+    
+   
 </body>
 </html>
