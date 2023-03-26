@@ -58,11 +58,11 @@
   float: right;
 }
 
-.nav {
+/*.nav {
   text-align: center;
   background-color: #333;
   color: white;
-}
+}*/
 
 .search-bar {
   width: 250px;
@@ -143,7 +143,7 @@ body {
 }
 
 .ari_pods {
-    background-color: #1C1C1C;
+    background-color: #2b2a2a;
 }
 
 .beats {
