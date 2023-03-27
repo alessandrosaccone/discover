@@ -93,6 +93,15 @@ body {
     color: #e4e4e4;
 }
 
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('image/roma_italia_viajes_city_ciudad_rome_italy_nocturna-886132.jpg!d') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -157,4 +166,118 @@ body {
     width: calc(100% - 58%);
     height: 100%;
     background: transparent;
+}
+
+.logreg-box .form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #e4e4e4;
+}
+
+.form-box h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.form-box .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 28px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px; /*di quanto si alza*/
+}
+
+.input-box .icon{
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 25px;
+}
+
+.form-box .remember-forgot{
+    font-size: 18px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: white;
+    text-decoration: none
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #e4e4e4;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0, .5);
+}
+
+.form-box .login-register{
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-register p a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
 }
