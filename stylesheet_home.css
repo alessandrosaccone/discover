@@ -40,7 +40,7 @@
 .navheader > nav > form {
   position: fixed;
   top: 13px;
-  right: 0;
+  right: 10px;
   width: 20%;
   padding: 20px;
   background: transparent;
