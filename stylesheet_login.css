@@ -166,7 +166,7 @@ body {
     right: 0;
     width: calc(100% - 58%);
     height: 100%;
-    background: transparent;
+    overflow: hidden;
 }
 
 .logreg-box .form-box{
@@ -186,6 +186,7 @@ body {
 .logreg-box .form-box.login{
     transform: translateX(0);
     transition: transform .6s ease;
+    transition-delay: .7s;
 }
 
 .logreg-box.active .form-box.login{
@@ -195,7 +196,15 @@ body {
 
 .logreg-box .form-box.register{
     transform: translateX(590px); /*controllare bene questo*/
+    transition: transform .6s ease;
+    transition-delay: 0s;
 }
+
+.logreg-box.active .form-box.register{
+    transform: translateX(0px); /*controllare bene questo*/
+    transition-delay: .7s;
+}
+
 
 .form-box h2{
     font-size: 35px;
