@@ -11,7 +11,7 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
       if (elementTop < windowHeight - 50) {
-        nav.style.background="#b6810fac";
+        nav.style.background="#2b2a2aac";
         nav.classList.add("active"); 
       }
       else { 

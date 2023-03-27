@@ -142,11 +142,15 @@ body {
     top: 10%;
 }
 
+.beats {
+  width: 100%;
+  padding: 0 50%;
+}
+
 .ari_pods,
-.beats,
 .apple_watch {
     width: 100%;
-    padding: 0 80px;
+    padding: 0 120px;
 }
 
 .section_container {
@@ -193,6 +197,7 @@ body {
 .text > .description {
     font-size: 18px;
     font-weight: 100;
+    text-align: left;
 }
 
 .beats > .section_container > .model_section {
