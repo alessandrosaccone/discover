@@ -160,7 +160,7 @@ body {
 .beats > .section_container {
   width: 45%;
   margin: 0 auto;
-  right: 10%;
+  right: 9%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
