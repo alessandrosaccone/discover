@@ -137,14 +137,10 @@ body {
     align-items: center;
 }
 
-.ari_pods_model {
-    position: sticky;
-    top: 10%;
-}
 
 .beats {
   width: 100%;
-  padding: 0 50%;
+  padding: 0 120px;
 }
 
 .ari_pods,
@@ -154,11 +150,20 @@ body {
 }
 
 .section_container {
-    width: 1170px;
+    width: 45%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.beats > .section_container {
+  width: 45%;
+  margin: 0 auto;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .ari_pods {
@@ -173,20 +178,23 @@ body {
     background-color: #92B7FF;
 }
 
-.model_section {
-    width: 400px;
-}
-
 .text {
-    width: 350px;
+    width: 100%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: left;
-    margin: 120px;
+    margin: 100px;
+}
+
+.beats > .section_container > .text {
+    width: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: left;
+    margin: 100px;
 }
 
 .text > .title {
-    font-size: 82px; 
-    font-weight: 100;
+    font-size: 85px; 
+    font-weight: 170;
     margin-bottom: 50px;
 }
 
@@ -195,14 +203,9 @@ body {
 }
 
 .text > .description {
-    font-size: 18px;
-    font-weight: 100;
+    font-size: 22px;
+    font-weight: 85;
     text-align: left;
-}
-
-.beats > .section_container > .model_section {
-    order: 2;
-    width: 500px;
 }
 
 .beats > .text {
@@ -232,7 +235,7 @@ body {
 }
 .image1 {
   position: relative;
-  width: 50%;
+  width: 40%;
 }
 .image1:hover .image {
   opacity: 0.3;

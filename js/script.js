@@ -11,7 +11,7 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
       if (elementTop < windowHeight - 50) {
-        nav.style.background="#2b2a2aac";
+        nav.style.background="#2b2a2aa0";
         nav.classList.add("active"); 
       }
       else { 
@@ -19,7 +19,6 @@ function reveal() {
         nav.classList.remove("active"); 
       }
     }
-    
   }
 
 window.addEventListener("scroll", reveal);
