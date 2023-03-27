@@ -22,50 +22,63 @@
   
 }
 
-.topnav {
-  overflow: hidden;
+.navheader {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: #1C1C1C; 
+  padding: 25px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  z-index: 100;
+  transition: background 0.5s ease-in-out; /*it gradually change color*/
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 13px 16px;
+.navheader > nav > form {
+  position: fixed;
+  top: 13px;
+  right: 0;
+  width: 20%;
+  padding: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar a{
+  position: relative;
+  font-size: 16px;
+  color: #e4e4e4;
   text-decoration: none;
-  font-size: 17px;
+  font-weight: 500;
+  margin-right: 30px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #8f9294;
-  color: black;
+.navbar a::after {   
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #e4e4e4;
+  border-radius: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: .5s;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #9a6608;
-  color: white;
+.navbar a:hover::after {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-.topnav-right {
-  float: right;
-}
-
-.nav_2 {
-  z-index: 999;
-}
-
-/*.nav {
-  text-align: center;
-  background-color: #333;
-  color: white;
-}*/
 
 .search-bar {
   width: 250px;
@@ -84,6 +97,7 @@
   outline: none;
   font-size: 16px;
   color: #e4e4e4;
+  padding-left: 10px;
 }
 
 .search-bar input::placeholder {

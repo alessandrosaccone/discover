@@ -1,5 +1,6 @@
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
+    var nav = document.getElementById("navbar");
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
@@ -9,7 +10,16 @@ function reveal() {
       } else {
         reveals[i].classList.remove("active");
       }
+      if (elementTop < windowHeight - 50) {
+        nav.style.background="#2b2a2a";
+        nav.classList.add("active"); 
+      }
+      else { 
+        nav.style.background="transparent";
+        nav.classList.remove("active"); 
+      }
     }
+    
   }
 
 window.addEventListener("scroll", reveal);
