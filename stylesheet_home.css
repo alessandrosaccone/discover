@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.header {
-  padding: 30%; /* some padding */
+.all_header {
+  padding: 80px; /* some padding */
   font-size: 2.5em;
   text-align: center; /* center the text */
-  color: white; 
+  color: white;
   height: 100%;
   width: 100%;
   background-image: url("image/colosseo.jpg");
@@ -19,7 +19,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+}
+
+.header {
+  padding: 28.5%; /* some padding */
+  font-size: 2.5em;
+  text-align: center; /* center the text */
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-image: url("image/colosseo.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navheader {
@@ -37,7 +50,22 @@
   transition: background 0.5s ease-in-out; /*it gradually change color*/
 }
 
-.navheader > nav > form {
+.navheader2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: #2b2a2aa0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  z-index: 100;
+}
+
+.navheader > nav > form,
+.navheader2 > nav > form {
   position: fixed;
   top: 13px;
   right: 10px;
@@ -51,7 +79,7 @@
   z-index: 100;
 }
 
-.navbar a{
+.navbar a {
   position: relative;
   font-size: 16px;
   color: #e4e4e4;
@@ -60,8 +88,8 @@
   margin-right: 30px;
 }
 
-.navbar a::after {   
-  content: '';
+.navbar a::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -71,14 +99,13 @@
   border-radius: 5px;
   transform: translateY(10px);
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .navbar a:hover::after {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 .search-bar {
   width: 250px;
@@ -104,7 +131,7 @@
   color: #e4e4e4;
 }
 
-.search-bar button{
+.search-bar button {
   width: 40px;
   height: 100%;
   background: transparent;
@@ -116,27 +143,26 @@
   cursor: pointer;
 }
 
-.search-bar button i{
+.search-bar button i {
   font-size: 22px;
   color: #e4e4e4;
 }
 
 body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .sections {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .beats {
   width: 100%;
@@ -145,16 +171,16 @@ body {
 
 .ari_pods,
 .apple_watch {
-    width: 100%;
-    padding: 0 120px;
+  width: 100%;
+  padding: 0 120px;
 }
 
 .section_container {
-    width: 45%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .beats > .section_container {
@@ -167,49 +193,49 @@ body {
 }
 
 .ari_pods {
-    background-color: #2b2a2a;
+  background-color: #2b2a2a;
 }
 
 .beats {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .apple_watch {
-    background-color: #92B7FF;
+  background-color: #92b7ff;
 }
 
 .text {
-    width: 100%;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: left;
-    margin: 100px;
+  width: 100%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-align: left;
+  margin: 100px;
 }
 
 .beats > .section_container > .text {
-    width: 100%;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: left;
-    margin: 100px;
+  width: 100%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-align: left;
+  margin: 100px;
 }
 
 .text > .title {
-    font-size: 85px; 
-    font-weight: 170;
-    margin-bottom: 50px;
+  font-size: 85px;
+  font-weight: 170;
+  margin-bottom: 50px;
 }
 
 .ari_pods > .section_container > .text {
-    color: #fff;
+  color: #fff;
 }
 
 .text > .description {
-    font-size: 22px;
-    font-weight: 85;
-    text-align: left;
+  font-size: 22px;
+  font-weight: 85;
+  text-align: left;
 }
 
 .beats > .text {
-    color: #000;
+  color: #000;
 }
 
 .image {
@@ -220,18 +246,18 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%);
 }
 .image1 {
   position: relative;
@@ -252,13 +278,13 @@ body {
   padding: 16px 32px;
 }
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 2s all ease;
 }
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
