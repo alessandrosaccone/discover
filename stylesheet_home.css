@@ -55,7 +55,7 @@
   top: 280px;  /*qui era zero ma abbiamo messo la barra sotto l'immagine*/
   left: 0;
   width: 100%;
-  padding: 25px;
+  padding: 30px;
   background: #2b2a2aa0;
   display: flex;
   justify-content: space-between;
