@@ -52,7 +52,7 @@
 
 .navheader2 {
   position: fixed;
-  top: 0;
+  top: 280px;  /*qui era zero ma abbiamo messo la barra sotto l'immagine*/
   left: 0;
   width: 100%;
   padding: 25px;
