@@ -1,27 +1,41 @@
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    var nav = document.getElementById("navbar");
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 30;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-      if (elementTop < windowHeight - 50) {
-        nav.style.background="#2b2a2aa0";
-        nav.classList.add("active"); 
-      }
-      else { 
-        nav.style.background="transparent";
-        nav.classList.remove("active"); 
-      }
+  var reveals = document.querySelectorAll(".reveal");
+  var nav = document.getElementById("navbar");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 30;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+    if (elementTop < windowHeight - 50) {
+      nav.style.background = "#2b2a2aa0";
+    } else {
+      nav.style.background = "transparent";
     }
   }
+}
+
+function bar_color() {
+  var myNav = document.getElementById("navbar_app");
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop >= 200 ||
+      document.documentElement.scrollTop >= 200
+    ) {
+      myNav.classList.add("nav-colored");
+      myNav.classList.remove("nav-transparent");
+    } else {
+      myNav.classList.add("nav-transparent");
+      myNav.classList.remove("nav-colored");
+    }
+  };
+}
 
 window.addEventListener("scroll", reveal);
-
+window.addEventListener("scroll", bar_color);
 // To check the scroll position on page load
-reveal(); 
+reveal();
+bar_color();
