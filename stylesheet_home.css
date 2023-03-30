@@ -21,7 +21,7 @@
 }
 
 .header {
-  padding: 29%; /* some padding */
+  padding: 23.5%; /* some padding */
   font-size: 2.5em;
   text-align: center; /* center the text */
   color: white;
@@ -297,6 +297,6 @@ body {
 
 @media screen and (max-width: 600px) {
   .header {
-    padding: 22%;
+    padding: 29%;
   }
 }
