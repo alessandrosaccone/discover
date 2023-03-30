@@ -296,7 +296,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  header {
-    padding: 24%;
+  .header {
+    padding: 22%;
   }
 }
