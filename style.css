@@ -13,7 +13,7 @@
   font-size: 2.5em;
   text-align: center; /* center the text */
   color: white;
-  background-image: url("image/colosseo.jpg");
+  background-image: url("image/airplain.webp");
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@
 }
 
 .nav-colored {
-  background-color: #855d07aa;
+  background-color: #4b473faa;
 }
 .nav-transparent {
   background-color: transparent;

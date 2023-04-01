@@ -7,33 +7,27 @@
   font-family: "Poppins", sans-serif;
 }
 
-.header {
-  padding: 23.5%; /* some padding */
-  font-size: 2.5em;
-  text-align: center; /* center the text */
-  color: white;
-  background-image: url("image/colosseo.jpg");
-  background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .sections {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.beats {
+.sec2 {
   width: 100%;
   padding: 0 120px;
 }
 
-.ari_pods,
-.apple_watch {
+.sec1,
+.sec3 {
   width: 100%;
   padding: 0 120px;
+}
+
+.main_sec {
+  width: 100%;
+  padding: 0 120px;
+  background-color: rgba(197, 126, 25, 0.725);
 }
 
 .section_container {
@@ -44,7 +38,7 @@
   align-items: flex-start;
 }
 
-.beats > .section_container {
+.sec2 > .section_container {
   width: 45%;
   margin: 0 auto;
   right: 9%;
@@ -53,15 +47,15 @@
   align-items: flex-start;
 }
 
-.ari_pods {
+.sec1 {
   background-color: #2b2a2a;
 }
 
-.beats {
+.sec2 {
   background-color: #fff;
 }
 
-.apple_watch {
+.sec3 {
   background-color: #92b7ff;
 }
 
@@ -72,7 +66,7 @@
   margin: 100px;
 }
 
-.beats > .section_container > .text {
+.sec2 > .section_container > .text {
   width: 100%;
   font-family: "M PLUS Rounded 1c", sans-serif;
   text-align: left;
@@ -85,7 +79,7 @@
   margin-bottom: 50px;
 }
 
-.ari_pods > .section_container > .text {
+.sec1 > .section_container > .text {
   color: #fff;
 }
 
@@ -95,7 +89,7 @@
   text-align: left;
 }
 
-.beats > .text {
+.sec2 > .text {
   color: #000;
 }
 
@@ -133,7 +127,7 @@
 }
 
 .text1 {
-  background-color: #c28e16;
+  background-color: #168e887e;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
@@ -164,9 +158,9 @@
     opacity: 1;
   }
 }
-
+/*
 @media screen and (min-height: 768px) {
   .header {
     padding: 29%;
   }
-}
+}*/
