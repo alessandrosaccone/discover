@@ -1,0 +1,35 @@
+.profilo_1 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 400px;
+    margin-top: 200px;
+}
+
+.profilo_2 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 430px;
+    margin-top: 230px;
+}
+
+.profilo_3 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 460px;
+    margin-top: 260px;
+}
+
+.profilo_4 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 490px;
+    margin-top: 290px;
+}
