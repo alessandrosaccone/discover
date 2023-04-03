@@ -113,7 +113,7 @@ h2 {
   background: var(--thumb);
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .card-title {
     grid-column: 2 / 5;
   }
