@@ -10,7 +10,7 @@ function reveal() {
     } else {
       reveals[i].classList.remove("active");
     }
-    if (elementTop < windowHeight - 50) {
+    if (elementTop < windowHeight + 800) {
       nav.style.background = "#dd7d40bd";
     } else {
       nav.style.background = "transparent";
@@ -41,24 +41,24 @@ reveal();
 bar_color();
 
 /*stelle */
-const stars = document.querySelectorAll('.star');
+const stars = document.querySelectorAll(".star");
 let rating = 0;
 
 stars.forEach((star, index) => {
-  star.addEventListener('click', () => {
+  star.addEventListener("click", () => {
     rating = index + 1;
     updateRating();
   });
 
-  star.addEventListener('mouseover', () => {
+  star.addEventListener("mouseover", () => {
     for (let i = 0; i <= index; i++) {
-      stars[i].classList.add('hover');
+      stars[i].classList.add("hover");
     }
   });
 
-  star.addEventListener('mouseout', () => {
+  star.addEventListener("mouseout", () => {
     for (let i = 0; i <= index; i++) {
-      stars[i].classList.remove('hover');
+      stars[i].classList.remove("hover");
     }
   });
 });
@@ -66,9 +66,9 @@ stars.forEach((star, index) => {
 function updateRating() {
   for (let i = 0; i < stars.length; i++) {
     if (i < rating) {
-      stars[i].classList.add('selected');
+      stars[i].classList.add("selected");
     } else {
-      stars[i].classList.remove('selected');
+      stars[i].classList.remove("selected");
     }
   }
 }

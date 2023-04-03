@@ -138,10 +138,10 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1980px) {
+@media screen and (min-width: 2000px) {
   .card-link-wrapper {
     grid-column: 4;
-    padding: 0px 100px;
+    padding: 0px 90px;
   }
 }
 /*
