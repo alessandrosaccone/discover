@@ -9,11 +9,11 @@
 
 .all_header {
   position: sticky;
-  padding: 80px; /* some padding */
-  font-size: 2.5em;
+  padding: 60px; /* some padding */
+  font-size: 3em;
   text-align: center; /* center the text */
-  color: white;
-  background-image: url("image/airplain.webp");
+  color: black;
+  background-image: url("image/banner_mario.jpg");
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;

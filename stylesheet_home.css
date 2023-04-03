@@ -48,15 +48,18 @@
 }
 
 .sec1 {
-  background-color: #2b2a2a;
+  background-color: #000;
+  backdrop-filter: blur(10px);
 }
 
 .sec2 {
-  background-color: #fff;
+  background-image: url();
+  backdrop-filter: blur(10px);
 }
 
 .sec3 {
-  background-color: #92b7ff;
+  background-image: url();
+  backdrop-filter: blur(10px);
 }
 
 .text {
