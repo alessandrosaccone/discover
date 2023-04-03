@@ -141,6 +141,7 @@ h2 {
 @media screen and (min-width: 1980px) {
   .card-link-wrapper {
     grid-column: 4;
+    padding: 0px 100px;
   }
 }
 /*
