@@ -118,7 +118,7 @@ h2 {
     grid-column: 2 / 5;
   }
   .card-link-wrapper {
-    grid-column: 4;
+    grid-column: 3;
   }
   .cards {
     grid-auto-columns: 49%;
@@ -126,6 +126,12 @@ h2 {
   .card {
     grid-template-rows: 10px 250px 30px;
     grid-template-columns: 100px 200px 200px;
+  }
+}
+
+@media screen and (min-width: 1980px) {
+  .card-link-wrapper {
+    grid-column: 4;
   }
 }
 /*
