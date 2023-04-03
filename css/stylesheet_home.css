@@ -31,7 +31,7 @@
 }
 
 .section_container {
-  width: 45%;
+  width: 47%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -53,12 +53,10 @@
 }
 
 .sec2 {
-  background-image: url();
   backdrop-filter: blur(10px);
 }
 
 .sec3 {
-  background-image: url();
   backdrop-filter: blur(10px);
 }
 
@@ -89,6 +87,7 @@
 .text > .description {
   font-size: 22px;
   font-weight: 85;
+  padding: 8px;
   text-align: left;
 }
 

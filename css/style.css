@@ -12,8 +12,8 @@
   padding: 60px; /* some padding */
   font-size: 3em;
   text-align: center; /* center the text */
-  color: whitesmoke;
-  background-image: url("image/banner_mario.jpg");
+  color: rgba(17, 16, 16, 0.818);
+  background-image: url("../image/banner_mario.jpg");
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
@@ -169,5 +169,3 @@ body {
 .star.selected:before {
   content: "\2605";
 }
-
-
