@@ -39,3 +39,36 @@ window.addEventListener("scroll", bar_color);
 // To check the scroll position on page load
 reveal();
 bar_color();
+
+/*stelle */
+const stars = document.querySelectorAll('.star');
+let rating = 0;
+
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    rating = index + 1;
+    updateRating();
+  });
+
+  star.addEventListener('mouseover', () => {
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.add('hover');
+    }
+  });
+
+  star.addEventListener('mouseout', () => {
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.remove('hover');
+    }
+  });
+});
+
+function updateRating() {
+  for (let i = 0; i < stars.length; i++) {
+    if (i < rating) {
+      stars[i].classList.add('selected');
+    } else {
+      stars[i].classList.remove('selected');
+    }
+  }
+}

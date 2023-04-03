@@ -12,7 +12,7 @@
   padding: 60px; /* some padding */
   font-size: 3em;
   text-align: center; /* center the text */
-  color: black;
+  color: whitesmoke;
   background-image: url("image/banner_mario.jpg");
   background-color: #cccccc;
   background-position: center;
@@ -136,3 +136,38 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*STELLE*/
+.rating {
+  font-size: 30px;
+}
+
+.star {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.star:before {
+  content: "\2606";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffc107;
+}
+
+.star:hover:before,
+.star:hover ~ .star:before,
+.star.selected:before {
+  color: #ffc107;
+}
+
+.star.selected:before {
+  content: "\2605";
+}
+
+
