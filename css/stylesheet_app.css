@@ -119,12 +119,13 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1650px) {
   .card-title {
     grid-column: 2 / 4;
   }
   .card-link-wrapper {
     grid-column: 3;
+    padding: 0px 200px;
   }
   .cards {
     grid-auto-columns: 49%;
