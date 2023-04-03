@@ -129,7 +129,7 @@ h2 {
   }
   .cards {
     grid-auto-columns: 49%;
-    grid-column-gap: 10px;
+    grid-column-gap: 30px;
     grid-auto-flow: column;
   }
   .card {
