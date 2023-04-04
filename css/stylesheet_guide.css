@@ -1,41 +1,49 @@
-.box{
-    width: 1600px;
-    margin: 0 auto;
-    background-color: transparent;
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    background: transparent; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-.profilo_1 {
+.box .profilo_1 {
     width: 200px;
     height: 600px;
     background-image: url(../image/guida_4.jpg);
     border-radius: 150px / 200px;
-    margin-left: 400px;
-    margin-top: 250px;
+    margin-left: 250px;
+    margin-top: 75px;
 }
 
-.profilo_2 {
+.box .profilo_2 {
     width: 200px;
     height: 600px;
     background-image: url(../image/guida_4.jpg);
     border-radius: 150px / 200px;
-    margin-left: 600px;
-    margin-bottom: 1000px;
+    margin-left: 475px;
+    margin-top: -550px;
 }
 
-.profilo_3 {
+.box .profilo_3 {
     width: 200px;
     height: 600px;
     background-image: url(../image/guida_4.jpg);
     border-radius: 150px / 200px;
-    margin-left: 800px;
-    margin-top: 260px;
+    margin-left: 700px;
+    margin-top: -650px;
 }
 
-.profilo_4 {
+.box .profilo_4 {
     width: 200px;
     height: 600px;
     background-image: url(../image/guida_4.jpg);
     border-radius: 150px / 200px;
-    margin-left: 1000px;
-    margin-top: 290px;
+    margin-left: 925px;
+    margin-top: -550px;
 }
