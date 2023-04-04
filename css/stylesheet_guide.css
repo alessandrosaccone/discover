@@ -1,68 +1,116 @@
-.box {
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 550px;
-    background: transparent; 
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
-.box .profilo_1 {
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40% linear infinite;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.profilo_1 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 50px;
     border-radius: 150px / 200px;
-    margin-left: 250px;
-    margin-top: 75px;
 }
 
-.box .profilo_2 {
+.profilo_2 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 15px;
     border-radius: 150px / 200px;
-    margin-left: 475px;
-    margin-top: -550px;
 }
 
-.box .profilo_3 {
+.profilo_3 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 50px;
     border-radius: 150px / 200px;
-    margin-left: 700px;
-    margin-top: -650px;
 }
 
-.box .profilo_4 {
+.profilo_4 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 50px;
     border-radius: 150px / 200px;
-    margin-left: 925px;
-    margin-top: -550px;
 }
 
-.box .profilo_5 {
+.profilo_5 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 50px;
     border-radius: 150px / 200px;
-    margin-left: 25px;
-    margin-top: -600px;
 }
 
-.box .profilo_6 {
+.profilo_6 {
     width: 200px;
     height: 600px;
+    display: flex;
+    align-items: center;
     background-image: url(../image/guida_4.jpg);
+    padding: 50px;
     border-radius: 150px / 200px;
-    margin-left: 1150px;
-    margin-top: -650px;
+} 
+
+.img{
+    transform: translateZ(20px);
+    perspective: 100px;
+    transition: transform 1%;
 }
 
+
+.m{
+    margin-left: 10px;
+}
+
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: "";
+    height: 240%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
