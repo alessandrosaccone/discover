@@ -24,6 +24,7 @@ h2 {
   list-style: none;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  overflow-x: hidden;
 }
 
 .card {
@@ -65,6 +66,7 @@ h2 {
   max-width: 85%;
   grid-column: 1 / 4;
   grid-row: 2;
+  font-size: large;
 }
 
 .card-link-wrapper {
@@ -72,12 +74,12 @@ h2 {
   width: 250px;
   padding: 0px 40px;
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 20;
 }
 
 .card-languages {
   grid-column: 1 / 4;
-  grid-row: 3;
+  grid-row: 20;
 }
 
 .card-link {
@@ -119,7 +121,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 1800px) {
   .card-title {
     grid-column: 2 / 4;
   }

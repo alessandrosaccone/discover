@@ -10,7 +10,7 @@ function reveal() {
     } else {
       reveals[i].classList.remove("active");
     }
-    if (elementTop < windowHeight + 800) {
+    if (elementTop < windowHeight + 600) {
       nav.style.background = "#dd7d40bd";
     } else {
       nav.style.background = "transparent";
