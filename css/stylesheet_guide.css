@@ -47,3 +47,22 @@
     margin-left: 925px;
     margin-top: -550px;
 }
+
+.box .profilo_5 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 25px;
+    margin-top: -600px;
+}
+
+.box .profilo_6 {
+    width: 200px;
+    height: 600px;
+    background-image: url(../image/guida_4.jpg);
+    border-radius: 150px / 200px;
+    margin-left: 1150px;
+    margin-top: -650px;
+}
+
