@@ -25,6 +25,7 @@
            || navigator.userAgent.match(/Windows Phone/i)) {
               a = true ;
               window.location.replace('app.html');
+              
            } else {
               a = false ;
            }
@@ -44,7 +45,7 @@
             <a href="guide.html">Guide</a>
             <a href="login.html">Login</a>
             <a href="help.html">Learn More</a>
-            <form action="#" class="search-bar">
+            <form action="#" class="search-bar" id="searchbar">
                 <input type="text" placeholder="Search...">
                 <button type="submit"><i class='bx bx-search'></i></button>
             </form>

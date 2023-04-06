@@ -36,6 +36,7 @@ function bar_color() {
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("scroll", bar_color);
+
 // To check the scroll position on page load
 reveal();
 bar_color();
