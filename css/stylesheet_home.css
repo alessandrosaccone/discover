@@ -21,7 +21,7 @@
 .sec1,
 .sec3 {
   width: 100%;
-  padding: 0 120px;
+  padding: 10px 120px;
 }
 
 .main_sec {
@@ -160,6 +160,17 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .text > .description {
+    font-size: 19px;
+  }
+  .text > .title {
+    font-size: 60px;
+    font-weight: 170;
+  }
+}
+
 /*
 @media screen and (min-height: 768px) {
   .header {
