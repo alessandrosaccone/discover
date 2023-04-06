@@ -54,7 +54,7 @@ h2 {
 
 .card-title {
   text-align: left;
-  padding: 10px 2px;
+  padding: 10px 20px;
   grid-column: 2 / 4;
   grid-row-start: 1;
   grid-row-end: 1;
@@ -94,6 +94,13 @@ h2 {
 
 .card-link:hover {
   background: var(--darkorange);
+}
+
+img {
+  padding: 7px;
+  border-radius: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .cards::-webkit-scrollbar {
