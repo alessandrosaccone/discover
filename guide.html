@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="bootstrap" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/stylesheet_app.css" />
     <link rel="stylesheet" href="css/stylesheet_guide.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Guide</title>
   </head>
   <body>
-
     <div class="all_header">
       <h1>Discover</h1>
       <p>Go wherever you want</p>
@@ -20,7 +22,7 @@
 
     <div class="navheader_general" id="navbar_app">
       <nav class="navbar">
-        <a href="home.html">Home</a>
+        <a href="home.html" id="home">Home</a>
         <a href="app.html">Visita</a>
         <a href="login.html">Login</a>
         <a href="help.html">Learn More</a>
@@ -31,6 +33,30 @@
         </form>
       </nav>
     </div>
+
+    <!-- deleting the "home" from the navbar while using a mobile device -->
+    <script>
+      var a;
+      function myfunction() {
+        if (
+          navigator.userAgent.match(/Android/i) ||
+          navigator.userAgent.match(/webOS/i) ||
+          navigator.userAgent.match(/iPhone/i) ||
+          navigator.userAgent.match(/iPad/i) ||
+          navigator.userAgent.match(/iPod/i) ||
+          navigator.userAgent.match(/BlackBerry/i) ||
+          navigator.userAgent.match(/Windows Phone/i)
+        ) {
+          a = true;
+          const home = document.getElementById("home");
+          home.remove();
+        } else {
+          a = false;
+        }
+        //alert(a);
+      }
+      myfunction();
+    </script>
 
     <!--
     <div class="box">
@@ -43,24 +69,24 @@
     </div>
     -->
 
-      <div class="slider">
-        <div class="slide-track">
-          <div class="profilo_1 m img"></div>
-          <div class="profilo_2 m img"></div>
-          <div class="profilo_3 m img"></div>
-          <div class="profilo_4 m img"></div>
-          <div class="profilo_5 m img"></div>
-          <div class="profilo_6 m img"></div>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="profilo_1 m img"></div>
+        <div class="profilo_2 m img"></div>
+        <div class="profilo_3 m img"></div>
+        <div class="profilo_4 m img"></div>
+        <div class="profilo_5 m img"></div>
+        <div class="profilo_6 m img"></div>
 
-          <div class="profilo_1 m img"></div>
-          <div class="profilo_2 m img"></div>
-          <div class="profilo_3 m img"></div>
-          <div class="profilo_4 m img"></div>
-          <div class="profilo_5 m img"></div>
-          <div class="profilo_6 m img"></div>
-        </div>
-      </div>        
-    
+        <div class="profilo_1 m img"></div>
+        <div class="profilo_2 m img"></div>
+        <div class="profilo_3 m img"></div>
+        <div class="profilo_4 m img"></div>
+        <div class="profilo_5 m img"></div>
+        <div class="profilo_6 m img"></div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
