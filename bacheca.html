@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/stylesheet_bacheca.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+    <script src="js/script_app.js"></script>
+    <title>Bacheca</title>
+  </head>
+  <body>
+    <div class="all_header" id="head">
+      <h1>Discover</h1>
+      <p>Go wherever you want</p>
+    </div>
+    <div class="navheader_general" id="navbar_app">
+      <nav class="navbar">
+        <a href="home.html" id="home">Home</a>
+        <a href="guide.html">Guide</a>
+        <a href="login.html">Login</a>
+        <a href="help.html">Learn More</a>
+      </nav>
+    </div>
+    <!-- deleting the "home" from the navbar while using a mobile device -->
+    <script>
+      var a;
+      function myfunction() {
+        if (
+          (navigator.userAgent.match(/Android/i) && screen.width < 513) ||
+          navigator.userAgent.match(/webOS/i) ||
+          navigator.userAgent.match(/iPhone/i) ||
+          navigator.userAgent.match(/iPod/i) ||
+          navigator.userAgent.match(/BlackBerry/i) ||
+          (navigator.userAgent.match(/Windows Phone/i) && screen.width < 513) ||
+          screen.orientation.type("portrait-secondary")
+        ) {
+          a = true;
+          const home = document.getElementById("home");
+          home.remove();
+          document.getElementById("searchbar").remove();
+          document.getElementById("head").remove();
+        } else {
+          a = false;
+        }
+        //alert(a);
+      }
+      myfunction();
+    </script>
+
+    <div class="container">
+      <div class="block">
+        <img src="image/guida1.webp" />
+        <div class="data">
+          <h4>Followers</h4>
+          <br />100
+        </div>
+        <div class="data">
+          <h4>Visits</h4>
+          <br />5
+        </div>
+        <div class="data">
+          <h4>Ratings</h4>
+          <br />5/5
+        </div>
+      </div>
+    </div>
+    <br />
+    <h1>Pubblica una scheda!</h1>
+
+    <form>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault02">Testo</label>
+          <textarea
+            style="font-size: large"
+            cols="40"
+            rows="10"
+            type="text"
+            class="form-control"
+            id="validationDefault02"
+            placeholder="Text"
+            value="Otto"
+            required
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault01">Titolo</label>
+          <input
+            style="font-size: large"
+            type="text"
+            class="form-control"
+            id="validationDefault01"
+            placeholder="Visita al Vaticano"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault03">Luogo</label>
+          <input
+            style="font-size: large"
+            type="text"
+            class="form-control"
+            id="validationDefault03"
+            placeholder="Luogo"
+            required
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="orario">Orario</label>
+          <input
+            type="text"
+            class="form-control"
+            id="orario"
+            placeholder="11:30"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">Città</label> <br />
+          <select
+            size="1.1"
+            cols="4"
+            name="citta"
+            class="custom-select"
+            id="validationDefault04"
+          >
+            <option selected value="nessuna"></option>
+            <option value="Roma">Roma</option>
+            <option value="Napoli">Napoli</option>
+            <option value="Firenze">Firenze</option>
+            <option value="Pozzuoli">Pozzuoli</option>
+          </select>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">Lingue</label> <br />
+          <select size="1.1" cols="4" name="citta" class="custom-select">
+            <option selected value="Italiano">Italiano</option>
+            <option value="Inglese">Inglese</option>
+            <option value="Tedesco">Tedesco</option>
+            <option value="Russo">Russo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck2"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck2">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Pubblica</button>
+    </form>
+  </body>
+</html>

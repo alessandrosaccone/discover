@@ -408,19 +408,26 @@
       float: center;
     }
   }
+  /*IPAD MINI*/
   @media screen and (min-height: 930px) {
     .search_container {
       top: 28%;
       padding: 19px;
     }
     .search-bar_center {
-      width: 99%;
+      width: 750px;
       height: 45px;
     }
     .cards {
       position: relative;
       top: 80px;
-      padding: 0 17 px;
+      padding: 0 18px;
+    }
+    .card-link-wrapper {
+      padding: 5px 100px;
+    }
+    .card-title {
+      padding: 15px;
     }
   }
 }

@@ -19,7 +19,10 @@
     padding: 0 120px;
   }
 
-  .sec1,
+  .sec1 {
+    width: 100%;
+  }
+
   .sec3 {
     width: 100%;
     padding: 10px 120px;

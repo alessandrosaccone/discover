@@ -12,4 +12,5 @@ https://www.youtube.com/watch?v=KL4--AJrJHQ 10:19
 
 AIzaSyC_avGNywMxFeB0YmrgFo8o2Zmmp2UsZH8 mappa
 
-https://www.byte-post.com/come-creare-un-carosello-slideshow-per-il-sito/ carosello guide
+poiché in guide la navbarnon può cambiare colore perché non puoi scrollare,
+devi renderla da subito o nera trasparente o arancione, perché attualmente non si vede

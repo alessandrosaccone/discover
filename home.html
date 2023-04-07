@@ -17,8 +17,10 @@
     <script>
         var a; function myfunction() {
            if (
+            navigator.userAgent.match(/Android/i) ||
               navigator.userAgent.match(/webOS/i)
-           || navigator.userAgent.match(/iPhone/i)
+           || navigator.userAgent.match(/iPhone/i) ||
+           navigator.userAgent.match(/iPad/i)
            || navigator.userAgent.match(/iPod/i)
            || navigator.userAgent.match(/BlackBerry/i)
            || navigator.userAgent.match(/Windows Phone/i) 
@@ -45,6 +47,8 @@
             <a href="guide.html">Guide</a>
             <a href="login.html">Login</a>
             <a href="help.html">Learn More</a>
+            <a href="bacheca.html">Profilo</a>
+
             <form action="#" class="search-bar" id="searchbar">
                 <input type="text" placeholder="Search...">
                 <button type="submit"><i class='bx bx-search'></i></button>
@@ -116,10 +120,10 @@
                 <img src="image/mondo.jpg" class="image">
                 <div class="middle">
                     <div class="text1">Trova subito il miglior prezzo per la tua meta!</div>
-                  </div>
+                </div>
             </div>
             <div class="section_container reveal">
-            <div class="text">
+                <div class="text">
                 <p class="title">Soluzioni Moderne</p>
                 <p class="description">Il nostro algoritmo ci permette di identificare nel miglior modo possibile il miglior prezzo 
                     attualmente presente sul mercato. Siamo anche in grado di stimare nel breve termine possibili variazioni che 
@@ -129,9 +133,9 @@
                     attualmente presente sul mercato. Siamo anche in grado di stimare nel breve termine possibili variazioni che 
                     potrebbero sopraggiungere nel giro di qualche ora, così da avvisarti in tempo nel caso il prezzo di un volo stia diminuendo! <br>
                     Che dici, è abbastanza per cominiciare un'avventura con noi?
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
