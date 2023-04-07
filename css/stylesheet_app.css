@@ -6,7 +6,7 @@
   --white: #fff;
   --thumb: #edf2f4;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 850px) {
   .container {
     padding: 10px 200px;
     margin: 0 auto;
@@ -255,9 +255,8 @@
   }
   .cards {
     position: relative;
-    top: 100px;
+    top: 110px;
     padding: 5px 0;
-    bottom: 10px;
   }
 
   .card {
@@ -304,7 +303,7 @@
   .card-link-wrapper {
     grid-column: 3;
     grid-row: 20;
-    padding: 15px;
+    padding: 31px;
   }
 
   .card-languages {
@@ -352,15 +351,15 @@
 
   .search_container {
     position: absolute;
-    width: 99%;
+    width: 100%;
     padding: 0 0;
-    top: 10%;
+    top: 9.5%;
     align-items: center;
     float: center;
   }
 
   .search-bar_center {
-    width: 100%;
+    width: 95%;
     height: 45px;
     background: #0a586e1a;
     border: 2px solid #ffffffbd;
@@ -399,4 +398,18 @@
     font-size: 22px;
     color: black;
   }
+  @media screen and (max-height: 580px) {
+    .search_container {
+      position: absolute;
+      width: 100%;
+      padding: 0 0;
+      top: 15%;
+      align-items: center;
+      float: center;
+    }
+  }
+}
+
+/*TABLET USERS*/
+@media screen and (max-width: 850px) {
 }
