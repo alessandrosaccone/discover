@@ -6,7 +6,9 @@ form {
 }
 
 .center {
-  padding: 0 47%;
+  position: sticky;
+  left: 45%;
+  right: 45%;
 }
 
 .navheader_general {
@@ -60,4 +62,116 @@ input {
 
 .container_form {
   padding: 2% 3%;
+}
+@media screen and (min-height: 700px) and (min-width: 1200px) and (max-height: 800px) and (max-width: 1300px) {
+  .block {
+    grid-template-rows: 100px;
+  }
+  .data {
+    font-size: large;
+    padding: 5%;
+  }
+  .data > h4 {
+    font-size: x-large;
+  }
+  .center {
+    left: 43%;
+  }
+  .block > img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*MOBILE USERS*/
+@media screen and (max-width: 769px) {
+  .block > img {
+    width: 60px;
+    height: 60px;
+  }
+  .block {
+    grid-template-rows: 60px;
+  }
+  .container {
+    padding: 17% 2%;
+  }
+  .data {
+    font-size: medium;
+    padding: 0 10px;
+    line-height: 1px;
+  }
+  .data > h4 {
+    font-size: medium;
+  }
+  .center {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+  }
+  form {
+    position: absolute;
+    left: 2%;
+    font-size: 1em;
+    width: 95%;
+    padding: 1%;
+  }
+  .container_form {
+    padding: 0 0;
+  }
+  @media screen and (max-width: 340px) {
+    .center {
+      position: absolute;
+      top: 30%;
+      left: 0;
+      right: 0;
+    }
+  }
+  /*IPAD MINI*/
+  @media screen and (min-height: 930px) {
+    .container {
+      padding: 2% 2%;
+    }
+    .center {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      right: 0;
+    }
+    form {
+      display: none;
+      font-size: 1.8em;
+      position: relative;
+      padding: 10%;
+      left: 7%;
+      width: 150%;
+    }
+    .data {
+      font-size: medium;
+      padding: 0 10px;
+      line-height: 15px;
+    }
+  }
+}
+
+/*TABLET USERS*/
+@media screen and (max-width: 850px) and (min-width: 769px) {
+  .block {
+    grid-template-columns: 0.45fr 1fr 1fr 1fr;
+  }
+  .data {
+    font-size: medium;
+  }
+  .data > h4 {
+    font-size: large;
+  }
+  .center {
+    left: 39%;
+    right: 0;
+  }
+  form {
+    font-size: 1.5em;
+    width: 130%;
+    left: 18%;
+  }
 }

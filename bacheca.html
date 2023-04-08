@@ -129,6 +129,7 @@
         <div class="col-md-2 mb-3">
           <label for="orario">Data</label>
           <input
+            style="font-size: large"
             type="date"
             class="form-control"
             id="data"
@@ -140,9 +141,43 @@
           <label for="orario">Orario</label>
           <input
             type="time"
+            style="font-size: large"
             class="form-control"
             id="orario"
             placeholder="11:30"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="form-row">
+        <div class="col-md-2 mb-3">
+          <label for="numeroPersone">Numero Persone</label>
+          <input
+            style="font-size: large"
+            type="number"
+            id="numeroPersone"
+            min="1"
+            max="25"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="col-md-2 mb-3">
+          <label for="ore">Ore</label>
+          <input type="number" id="ore" min="3" class="form-control" required />
+        </div>
+
+        <div class="col-md-2 mb-3">
+          <label for="prezzo">Prezzo all'ora</label>
+          <input
+            type="number"
+            step="any"
+            id="prezzo"
+            min="50"
+            max="80"
+            class="form-control"
             required
           />
         </div>
