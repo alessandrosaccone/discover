@@ -1,6 +1,4 @@
-var btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
+var btn_ = document.getElementById("btn_");
+btn_.addEventListener("click", () => {
   document.getElementById("form").style.display = "block";
 });
-
-function validateForm() {}

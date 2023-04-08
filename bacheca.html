@@ -74,19 +74,20 @@
     </div>
     <br />
     <div class="center">
-      <button id="btn" class="btn btn-primary center">
+      <button id="btn_" class="btn btn-primary center">
         Pubblica una scheda!
       </button>
     </div>
     <form id="form" onsubmit="return validateForm();">
       <div class="form-row">
         <div class="col-md-6 mb-3">
-          <label for="validationDefault02">Testo</label>
+          <label for="validationDefault02">Descrizione</label>
           <textarea
             style="font-size: large"
             cols="40"
-            rows="10"
+            rows="9"
             type="text"
+            maxlength="400"
             class="form-control"
             id="validationDefault02"
             placeholder="Text"
@@ -120,7 +121,17 @@
             required
           />
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-2 mb-3">
+          <label for="orario">Data</label>
+          <input
+            type="text"
+            class="form-control"
+            id="data"
+            placeholder="MM/GG/AAAA"
+            required
+          />
+        </div>
+        <div class="col-md-1 mb-3">
           <label for="orario">Orario</label>
           <input
             type="text"
@@ -141,7 +152,6 @@
             class="custom-select"
             id="validationDefault04"
           >
-            <option selected value="nessuna"></option>
             <option value="Roma">Roma</option>
             <option value="Napoli">Napoli</option>
             <option value="Firenze">Firenze</option>
@@ -174,7 +184,7 @@
           </label>
         </div>
       </div>
-      <button class="btn btn-primary" type="submit">Pubblica</button>
+      <button class="btn btn-primary" type="submit" id="sub">Pubblica</button>
     </form>
     <script src="js/script_bacheca.js"></script>
   </body>
