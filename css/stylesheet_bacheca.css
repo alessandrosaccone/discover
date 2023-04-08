@@ -1,7 +1,12 @@
 form {
+  display: none;
   font-size: 1.8em;
   position: relative;
   left: 25%;
+}
+
+.center {
+  padding: 0 42%;
 }
 
 .navheader_general {
