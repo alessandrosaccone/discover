@@ -74,7 +74,11 @@
     </div>
     <br />
     <div class="center">
-      <button id="btn_" class="btn btn-primary center">
+      <button
+        id="btn_"
+        class="btn btn-primary center"
+        onclick="return button();"
+      >
         Pubblica una scheda!
       </button>
     </div>
@@ -124,7 +128,7 @@
         <div class="col-md-2 mb-3">
           <label for="orario">Data</label>
           <input
-            type="text"
+            type="date"
             class="form-control"
             id="data"
             placeholder="MM/GG/AAAA"
@@ -134,7 +138,7 @@
         <div class="col-md-1 mb-3">
           <label for="orario">Orario</label>
           <input
-            type="text"
+            type="time"
             class="form-control"
             id="orario"
             placeholder="11:30"
