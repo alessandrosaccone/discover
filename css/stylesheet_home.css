@@ -175,7 +175,7 @@
     }
   }
   /*MACBOOK AIR*/
-  @media screen and (min-height: 700px) and (min-width: 1200px) {
+  @media screen and (min-height: 700px) and (min-width: 1200px) and (max-height: 800px) and (max-width: 1300px) {
     .sec2 > .section_container > .text,
     .sec3 > .section_container > .text {
       width: 100%;
