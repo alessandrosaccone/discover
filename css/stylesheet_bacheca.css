@@ -6,7 +6,7 @@ form {
 }
 
 .center {
-  padding: 0 45%;
+  padding: 0 47%;
 }
 
 .navheader_general {
@@ -29,8 +29,8 @@ input {
   position: relative;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  padding: 2%;
+  grid-template-columns: 0.35fr 1fr 1fr 1fr;
+  padding: 2.5%;
   border-radius: 300px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   transition: all 0.3s;
@@ -43,7 +43,7 @@ input {
 
 .data {
   position: relative;
-  padding: 1em;
+  padding: 8%;
   align-items: center;
   font-size: x-large;
 }
@@ -53,7 +53,7 @@ input {
 }
 
 .block > img {
-  width: 60%;
+  width: 100%;
   height: 100%;
   border-radius: 600px;
 }
