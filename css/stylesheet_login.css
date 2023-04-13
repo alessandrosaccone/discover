@@ -97,7 +97,7 @@ body {
 .background {
   width: 100%;
   height: 100vh;
-  background: url("../image/roma_italia_viajes_city_ciudad_rome_italy_nocturna-886132.jpg!d")
+  background: url("../image/banner_mario.jpg")
     no-repeat;
   background-size: cover;
   background-position: center;
@@ -111,7 +111,7 @@ body {
   transform: translate(-50%, -50%);
   width: 75%;
   height: 550px;
-  background: url("../image/roma_italia_viajes_city_ciudad_rome_italy_nocturna-886132.jpg!d")
+  background: url("../image/banner_mario.jpg")
     no-repeat; /*qui devo modificare l'immagine di*/
   background-size: cover;
   background-position: center;
