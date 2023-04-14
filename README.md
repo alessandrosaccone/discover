@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=KL4--AJrJHQ 10:19
 
 # mario
 
+https://www.youtube.com/watch?v=nS_Ht0lT-uQ carosello
+
 AIzaSyC_avGNywMxFeB0YmrgFo8o2Zmmp2UsZH8 mappa
 
 poiché in guide la navbarnon può cambiare colore perché non puoi scrollare,
