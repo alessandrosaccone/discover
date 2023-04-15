@@ -19,6 +19,7 @@
     />
     <script src="js/script.js"></script>
     <script src="js/script_app.js"></script>
+    <script src="js/script_responsiveness.js"></script>
     <title>Visite</title>
 </head>
 <body> 
@@ -34,29 +35,39 @@
                     echo '<ul class="cards">';
                 }
                 $title=$row['title'];
+                $citta=$row['citta'];
                 $description=$row['description'];
                 $lingua=$row['language'];
-                $data=$row['data'];
-                $ora=$row['ora'];
+                $data=$row['date'];
+                $ora=$row['time'];
                 $prezzo=$row['prezzo'];
                 $img=$row['image'];
+                $nome=$row['nome_guida'];
+                $cognome=$row['cognome_guida'];
                 $i++;
+                
                 echo "  <li class='card'>
                         <div class='card_image'>
                             <img src='$img' />
                         </div>
                         <h3 class='card-title'>
-                            $title
+                            $title <br> 
+                            <span class='name'>$nome $cognome</span>
                         </h3>
                         <div class='card-content'>
                             <p>
                                 $description
                             </p>
+                            <hr> ";
+                  echo " 
+                            <h4 style='font-size: 15px'>Città: $citta <br/></h4>
                         </div>
+                        
                         <div class='card-languages'>
                             <h4>
-                                Lingua: $lingua <br />
-                                Data e ora: $data
+                                
+                                Lingua: <span style='font-weight: normal;'>$lingua</span> <br />
+                                Data e ora: <span style='font-weight: normal'>$data $ora</span>
                             </h4>
                         </div>
                         <div class='card-link-wrapper'>

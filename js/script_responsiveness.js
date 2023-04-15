@@ -18,4 +18,5 @@ function myfunction() {
     a = false;
   }
   //alert(a);
+  return a;
 }

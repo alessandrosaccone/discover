@@ -6,7 +6,16 @@
   --white: #fff;
   --thumb: #edf2f4;
 }
+
+.name {
+  color: orange;
+}
+
 @media screen and (min-width: 850px) {
+  .card:hover .name {
+    color: white;
+  }
+
   .container {
     padding: 10px 200px;
     margin: 0 auto;
@@ -74,7 +83,7 @@
   .card-link-wrapper {
     height: 40px;
     width: 250px;
-    padding: 0px 40px;
+    padding: 0px 45px;
     grid-column: 3;
     grid-row: 20;
   }
