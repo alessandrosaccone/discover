@@ -6,8 +6,7 @@ function myfunction() {
     navigator.userAgent.match(/iPhone/i) ||
     navigator.userAgent.match(/iPod/i) ||
     navigator.userAgent.match(/BlackBerry/i) ||
-    (navigator.userAgent.match(/Windows Phone/i) && screen.width < 513) ||
-    screen.orientation.type("portrait-secondary")
+    (navigator.userAgent.match(/Windows Phone/i) && screen.width < 513)
   ) {
     a = true;
     const home = document.getElementById("home");
