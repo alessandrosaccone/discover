@@ -1,3 +1,9 @@
+<?php
+    $dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
+                user=postgres password=postgres") 
+                or die('Could not connect: ' . pg_last_error());
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +19,34 @@
     />
     <script src="js/script.js"></script>
     <script src="js/script_app.js"></script>
-    <title>App</title>
+    <title>Visite</title>
 </head>
-<body>
-    <?php 
+<body> 
+    <?php
+        /*if ($dbconn) {
+            $q1 = "select * from utente where email= $1";
+            $result = pg_query_params($dbconn, $q1, array($email)); /*vuole un array di parametri
+            if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
+                echo "<h1>Non sembra che ti sia registrato/a</h1>
+                    <a href=../registrazione/index.html> Clicca qui per farlo </a>";
+            }
+            else {
+                $password = password_hash($_POST['inputPassword'], null);
+                $q2 = "select * from utente where email = $1 and paswd = $2";
+                $result = pg_query_params($dbconn, $q2, array($email,$password));
+                if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
+                    echo "<h1> La password e' sbagliata! </h1>
+                        <a href=login.php> Clicca qui per loggarti </a>";
+                }
+                else {
+                    $nome = $tuple['nome'];
+                    echo "<a href=../welcome.php?name=$nome> Premi qui </a>
+                        per inziare a usare il sito";
+                }
+            }
+        }*/
+    ?>
+<?php 
         echo 
     '<ul class="cards">
     <li class="card">

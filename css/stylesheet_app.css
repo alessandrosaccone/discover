@@ -50,8 +50,8 @@
   }
 
   .card:hover {
-    color: #212229;
-    background-image: url("../image/colosseo.jpg");
+    color: #1c1d20;
+    background-color: rgba(248, 143, 14, 0.671);
   }
 
   .card-title {
@@ -478,7 +478,7 @@
 
   .card:hover {
     color: #212229;
-    background-image: url("../image/colosseo.jpg");
+    background-color: url("../image/colosseo.jpg");
   }
 
   .card-title {
