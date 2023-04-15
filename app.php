@@ -23,240 +23,51 @@
 </head>
 <body> 
     <?php
-        /*if ($dbconn) {
-            $q1 = "select * from TABLE";
-            $result = pg_query($dbconn, $q1); 
-            $tuple=pg_fetch_array($result, null, PGSQL_ASSOC)))
-            for ($i=0; $i<count($tuple); $i++) {
+        if ($dbconn) {
+            $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
+            $result = pg_query($dbconn, $q1);
+            if ($result==false)
+              die("Could not find any row");
+            $i=0;
+            while ($row = pg_fetch_array($result)) {
                 if ($i%2==0) {
-                    echo '<ul class="cards">'
+                    echo '<ul class="cards">';
                 }
-                echo '<li class="card">'
-                $row=$tuple[$i];
-                $title=$row['title];
+                $title=$row['title'];
                 $description=$row['description'];
                 $lingua=$row['language'];
                 $data=$row['data'];
                 $ora=$row['ora'];
                 $prezzo=$row['prezzo'];
                 $img=$row['image'];
-
-                echo '  <div class="card_image">
-                            <img src="$img" />
+                $i++;
+                echo "  <li class='card'>
+                        <div class='card_image'>
+                            <img src='$img' />
                         </div>
-                        <h3 class="card-title">
+                        <h3 class='card-title'>
                             $title
                         </h3>
-                        <div class="card-content">
+                        <div class='card-content'>
                             <p>
                                 $description
                             </p>
                         </div>
-                        <div class="card-languages">
+                        <div class='card-languages'>
                             <h4>
                                 Lingua: $lingua <br />
                                 Data e ora: $data
                             </h4>
                         </div>
-                        <div class="card-link-wrapper">
-                            <a href="" class="card-link">Prenota</a>
+                        <div class='card-link-wrapper'>
+                            <a href='' class='card-link'>Prenota</a>
                         </div>
-                        </li>';
+                        </li>";
                 if ($i%2==0) {
-                    echo '</ul>'
+                    echo '</ul>';
                 }
             }
-        }*/
+        }
     ?>
-<?php 
-        echo 
-    '<ul class="cards">
-    <li class="card">
-      <div class="card_image">
-        <img src="image/guida1.webp" />
-      </div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova prova prova
-        prova prova
-      </h3>
-      <div class="card-content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Eueueueueueueueueueueueu
-        </p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eueueueueueueueueueueueu Lorem ipsum dolor sit amet consectetur
-      </div>
-      <div class="card-languages">
-        <h4>
-          Lingua: <br />
-          Data e ora:
-        </h4>
-      </div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Prenota</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image"><img src="image/guida2.webp" /></div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Prenota</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="cards">
-    <li class="card">
-      <div class="card_image"><img src="image/guida3.webp" /></div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image"><img src="image/guida4.jpg" /></div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="cards">
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="cards">
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="cards">
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="cards">
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-    <li class="card">
-      <div class="card_image">Image</div>
-      <h3 class="card-title">
-        Service 1 service 10 service tennis prova prova prova
-      </h3>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="card-languages"><h4>Lingue parlate:</h4></div>
-      <div class="card-link-wrapper">
-        <a href="" class="card-link">Acquista</a>
-      </div>
-    </li>
-  </ul>'
-    ;
-    ?>
-</body>
-</html>
+    </body>
+    </html>
