@@ -14,6 +14,7 @@
     <script src="js/script.js"></script>
     <script src="js/script_app.js"></script>
     <script src="js/script_bacheca.js"></script>
+    <script src="js/script_responsiveness.js"></script>
     <title>Bacheca</title>
   </head>
   <body>
@@ -24,34 +25,14 @@
     <div class="navheader_general" id="navbar_app">
       <nav class="navbar">
         <a href="home.html" id="home">Home</a>
-        <a href="app.html">App</a>
+        <a href="app.html">Visite</a>
         <a href="guide.html">Guide</a>
         <a href="login.html">Login</a>
+        <a href="bacheca.html">Profilo</a>
       </nav>
     </div>
     <!-- deleting the "home" from the navbar while using a mobile device -->
     <script>
-      var a;
-      function myfunction() {
-        if (
-          (navigator.userAgent.match(/Android/i) && screen.width < 513) ||
-          navigator.userAgent.match(/webOS/i) ||
-          navigator.userAgent.match(/iPhone/i) ||
-          navigator.userAgent.match(/iPod/i) ||
-          navigator.userAgent.match(/BlackBerry/i) ||
-          (navigator.userAgent.match(/Windows Phone/i) && screen.width < 513) ||
-          screen.orientation.type("portrait-secondary")
-        ) {
-          a = true;
-          const home = document.getElementById("home");
-          home.remove();
-
-          document.getElementById("head").remove();
-        } else {
-          a = false;
-        }
-        //alert(a);
-      }
       myfunction();
     </script>
 
@@ -165,7 +146,14 @@
 
         <div class="col-md-2 mb-3">
           <label for="ore">Ore</label>
-          <input style="background-color: transparent" type="number" id="ore" min="3" class="form-control" required />
+          <input
+            style="background-color: transparent"
+            type="number"
+            id="ore"
+            min="3"
+            class="form-control"
+            required
+          />
         </div>
 
         <div class="col-md-2 mb-3">
@@ -202,7 +190,13 @@
 
         <div class="col-md-3 mb-3">
           <label for="validationDefault04">Lingue</label> <br />
-          <select style="background-color: transparent" size="1.1" cols="4" name="citta" class="custom-select">
+          <select
+            style="background-color: transparent"
+            size="1.1"
+            cols="4"
+            name="citta"
+            class="custom-select"
+          >
             <option selected value="Italiano">Italiano</option>
             <option value="Inglese">Inglese</option>
             <option value="Tedesco">Tedesco</option>
@@ -227,6 +221,7 @@
       </div>
       <button class="btn btn-primary" type="submit" id="sub">Pubblica</button>
     </form>
+    <br />
     <script src="js/script_bacheca.js"></script>
   </body>
 </html>
