@@ -24,24 +24,46 @@
 <body> 
     <?php
         /*if ($dbconn) {
-            $q1 = "select * from utente where email= $1";
-            $result = pg_query_params($dbconn, $q1, array($email)); /*vuole un array di parametri
-            if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
-                echo "<h1>Non sembra che ti sia registrato/a</h1>
-                    <a href=../registrazione/index.html> Clicca qui per farlo </a>";
-            }
-            else {
-                $password = password_hash($_POST['inputPassword'], null);
-                $q2 = "select * from utente where email = $1 and paswd = $2";
-                $result = pg_query_params($dbconn, $q2, array($email,$password));
-                if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
-                    echo "<h1> La password e' sbagliata! </h1>
-                        <a href=login.php> Clicca qui per loggarti </a>";
+            $q1 = "select * from TABLE";
+            $result = pg_query($dbconn, $q1); 
+            $tuple=pg_fetch_array($result, null, PGSQL_ASSOC)))
+            for ($i=0; $i<count($tuple); $i++) {
+                if ($i%2==0) {
+                    echo '<ul class="cards">'
                 }
-                else {
-                    $nome = $tuple['nome'];
-                    echo "<a href=../welcome.php?name=$nome> Premi qui </a>
-                        per inziare a usare il sito";
+                echo '<li class="card">'
+                $row=$tuple[$i];
+                $title=$row['title];
+                $description=$row['description'];
+                $lingua=$row['language'];
+                $data=$row['data'];
+                $ora=$row['ora'];
+                $prezzo=$row['prezzo'];
+                $img=$row['image'];
+
+                echo '  <div class="card_image">
+                            <img src="$img" />
+                        </div>
+                        <h3 class="card-title">
+                            $title
+                        </h3>
+                        <div class="card-content">
+                            <p>
+                                $description
+                            </p>
+                        </div>
+                        <div class="card-languages">
+                            <h4>
+                                Lingua: $lingua <br />
+                                Data e ora: $data
+                            </h4>
+                        </div>
+                        <div class="card-link-wrapper">
+                            <a href="" class="card-link">Prenota</a>
+                        </div>
+                        </li>';
+                if ($i%2==0) {
+                    echo '</ul>'
                 }
             }
         }*/
