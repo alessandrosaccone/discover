@@ -15,7 +15,7 @@
   display: inline-block;
   text-decoration: none;
   color: white;
-  background: #5311e1a2;
+  background: #450dbca2;
   padding: 6px 25px;
   border-radius: 8px;
   transition: background 0.2s;
@@ -34,10 +34,10 @@
 .popup .popuptext {
   visibility: hidden;
   width: 200px;
-  background-color: #544f4fac;
+  background-color: transparent;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 8px 0;
   position: absolute;
   z-index: 1;
@@ -342,6 +342,7 @@
   }
 
   .popup .popuptext {
+    background-color: transparent;
     width: 160px;
     margin-left: -80px;
   }

@@ -24,7 +24,6 @@
 <body> 
     <?php
         if ($dbconn) {
-            
             $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
             $result = pg_query($dbconn, $q1);
             if ($result==false)
