@@ -39,13 +39,26 @@
 
     <div class="container">
       <div class="search_container" id="search">
-        <form action="#">
-          <div action="#" class="search-bar_center">
-            <input type="text" placeholder="Ricerca un luogo..." />
+        <form method="POST" action="app_query.php">
+          <div class="search-bar_center">
+            <input
+              type="text"
+              placeholder="Ricerca un luogo..."
+              name="search"
+              id="search"
+            />
             <button type="submit"><i class="bx bx-search"></i></button>
           </div>
         </form>
       </div>
+
+      <link
+        rel="stylesheet"
+        href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      />
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/script_app-query.js"></script>
 
       <div id="zonaDinamica"></div>
 
