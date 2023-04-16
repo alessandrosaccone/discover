@@ -17,8 +17,7 @@
   color: white;
   background: #450dbca2;
   padding: 6px 25px;
-  border-radius: 8px;
-  transition: background 0.2s;
+  border-radius: 20px;
 }
 
 .popup {

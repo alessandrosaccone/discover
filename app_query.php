@@ -62,10 +62,11 @@
             if ($val=='')
                 $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
             else 
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where s.citta='$val'";
+                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (s.citta 
+                LIKE '$val%' or s.title LIKE '$val%')";
             $result = pg_query($dbconn, $q1);
             if ($result==false)
-                echo "<h1> Non è stata trovata nessuna riga </h1>";
+                echo "<br> <h1> Non è stata trovata nessuna riga </h1>";
             $i=0;
             while ($row = pg_fetch_array($result)) {
                 if ($i%2==0) {
@@ -114,8 +115,8 @@
                         <div class='card-link-wrapper'>
                             <a class='popup card-link' onclick='return funct($i);'>Prenota
                             <span class='popuptext' id='myPopup_$i'>
-                                <button class='card-link_2'>Prenota tutti i posti: $price_1</button>
-                                <button class='card-link_2'>Prenota singolo: $price_2</button>
+                                <button class='card-link_2'>Prenota tutti i posti: €$price_1 </button>
+                                <button class='card-link_2'>Prenota singolo: €$price_2</button>
                             </span>
                             </a>
                         </div>
