@@ -1,3 +1,25 @@
+create table guida (
+	followers int,
+	rating int,
+	visits int,
+	nome varchar,
+	cognome varchar,
+	image varchar
+);
+create table schede (
+	date date,
+	price int,
+	description varchar,
+	language varchar,
+	title varchar,
+	nome_guida varchar,
+	cognome_guida varchar,
+	citta varchar,
+	ore int,
+	persone int,
+	time time
+);
+
 insert into guida values('235', '3.5', '47', 'Paolo', 'Manzi', 'image/images/profile1.jpg');
 insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/profile3.jpg');
 insert into guida values('23', '4', '20', 'Sara', 'Manzi', 'image/images/profile5.jpg');
