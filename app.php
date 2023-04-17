@@ -24,19 +24,16 @@
 <body> 
     <?php
         if ($dbconn) {
-          $val_i = $_POST['var'];
-          $val_i_2 = $_POST[''];
+          $val_i = $_POST['var']; 
           $val = strtolower($val_i);
-          $val_2 = strtolower($val_i_2);
-          echo "<h1> $val </h1>";
           if (empty($val))
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
           else
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.citta) 
-              LIKE '%$val%' or lower(s.title) LIKE '%$val%')";
+              LIKE '%$val%') or (lower(s.title) LIKE '%$val%')";
           $result = pg_query($dbconn, $q1);
             if ($result==false)
-                die("Could not find any row");
+                die("Could not find any row" . pg_last_error());
             $i=0;
             while ($row = pg_fetch_array($result)) {
                 if ($i%2==0) {
