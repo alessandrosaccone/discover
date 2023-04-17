@@ -47,6 +47,7 @@
                 $lingua=$row['language'];
                 $data=$row['date'];
                 $ora=$row['time'];
+                $ora=substr($ora, 0, strlen($ora)-3);
                 $prezzo=$row['price'];
                 $img=$row['image'];
                 $nome=$row['nome_guida'];
