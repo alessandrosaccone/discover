@@ -30,7 +30,7 @@
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
           else 
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.citta) 
-              LIKE '%$val%' or lower(s.title) LIKE '%$val%')";
+              LIKE '%$val%' or lower(s.title) LIKE '%$val%' or lower(s.language) LIKE '%$val%";
           $result = pg_query($dbconn, $q1);
             if ($result==false)
                 die("Could not find any row");
