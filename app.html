@@ -41,7 +41,7 @@
 
     <div class="container">
       <div class="search_container" id="search">
-        <form method="POST" action="" id="form">
+        <form method="POST" action="" id="myform">
           <div class="search-bar_center">
             <input
               id="search"
@@ -49,6 +49,7 @@
               name="search"
               placeholder="Ricerca un luogo..."
             />
+            <input type="text" name="lingua" placeholder="Lingua..." />
           </div>
         </form>
       </div>
@@ -86,16 +87,8 @@
       <!--JQuery-->
       <script>
         var string = "";
-        var string_lan = "";
         $("#search").on("keydown", function () {
-          if (event.keyCode == 8) string = string.slice(0, -1);
-          $("#zonaDinamica").load("app.php", { var: string });
-        });
-        $("#search").on("keypress", function () {
-          //alert("tasto premuto");
-          //alert(event.key);
-          string = string + event.key;
-          $("#zonaDinamica").load("app.php", { var: string });
+          $("#zonaDinamica").load("app.php", $("#myform").serialize());
         });
       </script>
 

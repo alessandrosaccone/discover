@@ -24,13 +24,20 @@
 <body> 
     <?php
         if ($dbconn) {
-          $val_i = $_POST['var']; 
+          $val_i = $_GET['search'];
+          $lan_i = $_GET['lingua']; 
           $val = strtolower($val_i);
-          if (empty($val))
-              $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
-          else
-              $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.citta) 
-              LIKE '%$val%') or (lower(s.title) LIKE '%$val%')";
+          $lan = strtolower($lan_i);
+          if (empty($val) && empty($lan)) {
+            $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";}
+          else if (empty($lan) && !empty($val)) {
+            $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.title)
+            LIKE '%$val%' or lower(s.citta) LIKE '%$val%'";}
+          else if (!empty($lan) && empty($val)) {    
+            $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.language) 
+            LIKE '%$lan%'";}
+          else $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.title)
+          LIKE '%$val%' or lower(s.citta) LIKE '%$val%') and lower(s.language) LIKE '%$lan%'";
           $result = pg_query($dbconn, $q1);
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
