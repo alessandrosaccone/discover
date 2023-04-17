@@ -50,14 +50,6 @@
               placeholder="Ricerca un luogo..."
             />
           </div>
-          <div class="search-bar_right">
-            <input
-              id="search"
-              type="text"
-              name="search"
-              placeholder="Lingua..."
-            />
-          </div>
         </form>
       </div>
 
@@ -94,6 +86,7 @@
       <!--JQuery-->
       <script>
         var string = "";
+        var string_lan = "";
         $("#search").on("keydown", function () {
           if (event.keyCode == 8) string = string.slice(0, -1);
           $("#zonaDinamica").load("app.php", { var: string });

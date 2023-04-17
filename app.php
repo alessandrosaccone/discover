@@ -25,10 +25,13 @@
     <?php
         if ($dbconn) {
           $val_i = $_POST['var'];
+          $val_i_2 = $_POST[''];
           $val = strtolower($val_i);
-          if ($val=='')
+          $val_2 = strtolower($val_i_2);
+          echo "<h1> $val </h1>";
+          if (empty($val))
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";
-          else 
+          else
               $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.citta) 
               LIKE '%$val%' or lower(s.title) LIKE '%$val%')";
           $result = pg_query($dbconn, $q1);
