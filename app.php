@@ -82,7 +82,6 @@
                         
                         <div class='card-languages'>
                             <h4>
-                                
                                 Lingua: <span style='font-weight: normal;'>$lingua</span> <br />
                                 Data e ora: <span style='font-weight: normal'>$data $ora</span>
                             </h4>
@@ -90,8 +89,8 @@
                         <div class='card-link-wrapper'>
                             <a class='popup card-link' onclick='return funct($i);'>Prenota
                             <span class='popuptext' id='myPopup_$i'>
-                                <button class='card-link_2'>Prenota tutti i posti: $price_1</button>
-                                <button class='card-link_2'>Prenota singolo: $price_2</button>
+                                <button class='card-link_2' style='font-weight: bold;'>Prenota tutti i posti: €$price_1</button>
+                                <button class='card-link_2' style='font-weight: bold;'>Prenota singolo: €$price_2</button>
                             </span>
                             </a>
                         </div>
