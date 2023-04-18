@@ -5,6 +5,11 @@
 */
 function button() {
   document.getElementById("form").style.display = "block";
+  document.getElementById("msg").style.display = "none";
+}
+
+function button_2() {
+  alert("ciao");
 }
 
 function validateForm() {
@@ -33,6 +38,7 @@ function validateForm() {
     (year == year_given && month == month_given && day > day_given)
   ) {
     alert("Inserire una data futura o almeno attuale");
+    return false;
   }
 
   if (
@@ -43,5 +49,6 @@ function validateForm() {
     minutes >= minutes_given
   ) {
     alert("Inserire un orario corretto");
+    return false;
   }
 }
