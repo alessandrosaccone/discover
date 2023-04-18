@@ -15,6 +15,8 @@
     <script src="js/script_app.js"></script>
     <script src="js/script_bacheca.js"></script>
     <script src="js/script_responsiveness.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <title>Bacheca</title>
   </head>
   <body>
@@ -37,73 +39,14 @@
     </script>
 
     <div class="container">
-      <div class="block">
-        <img src="image/guida1.webp" />
-        <div class="data">
-          <h4>Followers</h4>
-          <br />
-          <div id="0">num_f</div>
-        </div>
-        <div class="data">
-          <h4>Visits</h4>
-          <br />
-          <div id="1">num</div>
-        </div>
-        <div class="data">
-          <h4>Ratings</h4>
-          <br />
-          <div id="2">rating</div>
-        </div>
-      </div>
+      <div class="block" id="3"></div>
     </div>
 
-    <!-- AJAX -->
+    <!--JQuery-->
     <script>
-      window.onload = caricaRisorsa1;
-      window.onload = caricaRisorsa2;
-      window.onload = caricaRisorsa3;
-      function caricaRisorsa1(e) {
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.onreadystatechange = gestisciResponse;
-        httpRequest.open("GET", "bacheca1.php", true);
-        httpRequest.send();
-      }
-      function caricaRisorsa2(e) {
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.onreadystatechange = gestisciResponse;
-        httpRequest.open("GET", "bacheca2.php", true);
-        httpRequest.send();
-      }
-      function caricaRisorsa3(e) {
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.onreadystatechange = gestisciResponse;
-        httpRequest.open("GET", "bacheca3.php", true);
-        httpRequest.send();
-      }
-      function gestisciResponse1(e) {
-        if (
-          e.target.readyState == XMLHttpRequest.DONE &&
-          e.target.status == 200
-        ) {
-          document.getElementById("0").innerHTML = e.target.responseText;
-        }
-      }
-      function gestisciResponse2(e) {
-        if (
-          e.target.readyState == XMLHttpRequest.DONE &&
-          e.target.status == 200
-        ) {
-          document.getElementById("1").innerHTML = e.target.responseText;
-        }
-      }
-      function gestisciResponse3(e) {
-        if (
-          e.target.readyState == XMLHttpRequest.DONE &&
-          e.target.status == 200
-        ) {
-          document.getElementById("2").innerHTML = e.target.responseText;
-        }
-      }
+      $(window).on("load", function () {
+        $("#3").load("bacheca.php");
+      });
     </script>
 
     <br />

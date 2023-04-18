@@ -1,9 +1,3 @@
-<?php
-    $dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
-                user=postgres password=postgres") 
-                or die('Could not connect: ' . pg_last_error());
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +17,7 @@
 </head>
 <body> 
     <?php
+        require 'connect.php';
         if ($dbconn) {
           $val_i = $_GET['search'];
           $lan_i = $_GET['lingua']; 
