@@ -7,8 +7,7 @@ form {
 
 .center {
   position: sticky;
-  left: 45%;
-  right: 45%;
+  padding: 0 50%;
 }
 
 .navheader_general {

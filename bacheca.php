@@ -9,6 +9,8 @@
     $followers=$row['followers'];
     $ratings=$row['rating'];
     $visits=$row['visits'];
+    $nome=$row['nome'];
+    $cognome=$row['cognome'];
     echo "<img src='$img'/>
           <div class='data'>
             <h4>Followers</h4>
@@ -23,6 +25,6 @@
           <div class='data'>
             <h4>Ratings</h4>
             <br />
-            <div id='2'>$ratings</div>
+            <div id='2'>$ratings su 5</div>
           </div>";
 ?>
