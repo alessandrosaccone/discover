@@ -56,8 +56,12 @@
                 $cognome=$row['cognome_guida'];
                 $i++;
                 $price_1=$prezzo*$ore;
-                if ($persone!=0)
+                if ($persone!=0) {
                     $price_2=($prezzo*$ore)/$persone;
+                    if (is_float($price_2))
+                        $price_2=number_format((float)$price_2, 2, '.', '');
+                }
+
                 echo "  <li class='card'>
                         <div class='card_image'>
                             <img src='$img' />

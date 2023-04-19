@@ -24,48 +24,56 @@
       <h1>Discover</h1>
       <p>Go wherever you want</p>
     </div>
-    <div class="navheader_general" id="navbar_app">
-      <nav class="navbar">
-        <a href="home.html" id="home">Home</a>
-        <a href="app.html">Visite</a>
-        <a href="guide.html">Guide</a>
-        <a href="login.html">Login</a>
-        <a href="bacheca.html">Profilo</a>
-      </nav>
-    </div>
-    <!-- deleting the "home" from the navbar while using a mobile device -->
-    <script>
-      myfunction();
-    </script>
+    <div class="container_full">
+      <div class="navheader_general" id="navbar_app">
+        <nav class="navbar">
+          <a href="home.html" id="home">Home</a>
+          <a href="app.html">Visite</a>
+          <a href="guide.html">Guide</a>
+          <a href="login.html">Login</a>
+          <a href="bacheca.html">Profilo</a>
+        </nav>
+      </div>
+      <!-- deleting the "home" from the navbar while using a mobile device -->
+      <script>
+        myfunction();
+      </script>
 
-    <div class="container">
-      <div class="block" id="3"></div>
-    </div>
+      <div class="container">
+        <div class="block" id="3"></div>
+      </div>
 
-    <br />
-    <div style="display: grid; grid-template-columns: 50% 25%;">
-    <div class="center">
-      <button
-        id="btn_"
-        class="btn btn-success"
-        onclick="return button();"
+      <br />
+      <div class="coll">
+          <div class="center">
+            <button
+              id="btn_"
+              class="btn btn-success"
+              onclick="return button();"
+            >
+              Pubblica una scheda!
+            </button>
+          </div>
+          <div class="center">
+            <button
+              id="view"
+              class="btn btn-primary"
+              onclick="return button_2();"
+            >
+              Guarda le tue schede
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="msg"
+        style="color: green; text-align: center; font-size: 20px; padding: 10px"
       >
-        Pubblica una scheda!
-      </button>
+        Scheda caricata!
+      </div>
     </div>
-    <div class="center">
-      <button
-        id="view"
-        class="btn btn-primary"
-        onclick="return button_2();"
-      >
-        Guarda le tue schede
-      </button>
-    </div>
-  </div>
-    <div id="msg" style="color: green; text-align: center; font-size: 20px; padding: 10px">Scheda caricata!</div>
 
-    <div id="view_area"></div>
+    <div id="view_area" class="view_area"></div>
 
     <form
       id="form"
