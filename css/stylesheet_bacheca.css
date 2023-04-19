@@ -5,7 +5,10 @@ form {
   left: 25%;
 }
 
-.coll {display: grid; grid-template-columns: 50% 25%;}
+.coll {
+  display: grid;
+  grid-template-columns: 50% 25%;
+}
 
 .center {
   position: sticky;
@@ -90,6 +93,11 @@ input {
     width: 60px;
     height: 60px;
   }
+  .container_full {
+    position: fixed;
+    width: 95%;
+    top: 10%;
+  }
   .coll {
     grid-template-columns: 55% 45%;
   }
@@ -97,7 +105,7 @@ input {
     grid-template-rows: 60px;
   }
   .container {
-    padding: 17% 2%;
+    padding: 1% 3%;
   }
   .data {
     font-size: medium;
@@ -107,6 +115,10 @@ input {
   .data > h4 {
     font-size: medium;
   }
+  .view_area {
+    position: absolute !important;
+    top: 20% !important;
+  }
   .center {
     position: sticky;
     left: 3%;
@@ -115,6 +127,7 @@ input {
   }
   form {
     position: absolute;
+    top: 35%;
     left: 2%;
     font-size: 1em;
     width: 95%;
@@ -124,31 +137,37 @@ input {
     padding: 0 0;
   }
   @media screen and (max-width: 340px) {
-    .center {
-      position: absolute;
-      top: 30%;
-      left: 0;
-      right: 0;
-    }
   }
   /*IPAD MINI*/
   @media screen and (min-height: 930px) {
+    .container_full {
+      position: absolute;
+      width: 100%;
+      top: 30%;
+    }
     .container {
       padding: 2% 2%;
     }
+    .coll {
+      display: grid;
+      grid-template-columns: 1.2fr 0.5fr;
+    }
     .center {
-      position: absolute;
       top: 45%;
-      left: 0;
-      right: 0;
+      left: 10%;
     }
     form {
       display: none;
       font-size: 1.8em;
-      position: relative;
+      position: absolute;
+      top: 45%;
       padding: 10%;
       left: 7%;
       width: 150%;
+    }
+    .view_area {
+      position: absolute !important;
+      top: 45% !important;
     }
     .data {
       font-size: medium;
@@ -163,8 +182,10 @@ input {
   .block {
     grid-template-columns: 0.45fr 1fr 1fr 1fr;
   }
-
-  .coll {display: grid; grid-template-columns: 60% 40%;}
+  .coll {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .data {
     font-size: medium;
   }
@@ -172,8 +193,8 @@ input {
     font-size: large;
   }
   .center {
-    left: 39%;
-    right: 0;
+    left: 0%;
+    right: 20%;
   }
   form {
     font-size: 1.5em;
