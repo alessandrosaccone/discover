@@ -5,6 +5,13 @@ form {
   left: 25%;
 }
 
+.gre {
+  color: green;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .coll {
   display: grid;
   grid-template-columns: 50% 25%;
