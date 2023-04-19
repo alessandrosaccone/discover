@@ -72,7 +72,7 @@
                         <div class='card-languages'>
                             <h4>
                                 Lingua: <span style='font-weight: normal;'>$lingua</span> <br />
-                                Data e ora: <span style='font-weight: normal'>$data $ora</span>
+                                Data e ora: <span style='font-weight: normal'>$data <br> $ora</span>
                             </h4>
                         </div>
                         <div class='card-link-wrapper'>

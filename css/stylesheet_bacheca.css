@@ -165,8 +165,6 @@ input {
   .container_form {
     padding: 0 0;
   }
-  @media screen and (max-width: 340px) {
-  }
   /*IPAD MINI*/
   @media screen and (min-height: 930px) {
     .container_full {
