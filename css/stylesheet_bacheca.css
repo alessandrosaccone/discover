@@ -123,7 +123,7 @@ input {
     left: 30%;
   }
   .container_full {
-    position: fixed;
+    position: absolute;
     width: 95%;
     top: 10%;
   }
