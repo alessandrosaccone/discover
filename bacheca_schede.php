@@ -19,24 +19,18 @@
     <?php
         require 'connect.php';
         if ($dbconn) {
-            $val_i = $_GET['search'];
-            $lan_i = $_GET['lingua']; 
-            $val = strtolower($val_i);
-            $lan = strtolower($lan_i);
-            if (empty($val) && empty($lan)) {
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";}
-            else if (empty($lan) && !empty($val)) {
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.title)
-                LIKE '%$val%' or lower(s.citta) LIKE '%$val%'";}
-            else if (!empty($lan) && empty($val)) {    
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.language) 
-                LIKE '%$lan%'";}
-            else $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.title)
-            LIKE '%$val%' or lower(s.citta) LIKE '%$val%') and lower(s.language) LIKE '%$lan%'";
-            $result = pg_query($dbconn, $q1);
+            if ($_POST['nome']=='' || $_POST['cognome']=='') {
+                echo "<h1> bro </h1>";
+                die ("error"); 
+            }
+            $n=$_POST['nome'];
+            $c=$_POST['cognome'];
+            //echo "<h1>$n $c </h1>";
+            $q1 = 'select * from schede g join guida a on g.nome_guida=a.nome and g.cognome_guida=a.cognome where (g.nome_guida=$1 and g.cognome_guida=$2)';
+            $result = pg_query_params($dbconn, $q1, array($n, $c));
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
-            $i=0;
+            $i=0; 
             while ($row = pg_fetch_array($result)) {
                 if ($i%2==0) {
                     echo '<ul class="cards">';
@@ -82,7 +76,7 @@
                             </h4>
                         </div>
                         <div class='card-link-wrapper'>
-                            <a class='popup card-link' onclick='return funct($i);'>Prenota
+                            <a class='popup card-link' onclick='return funct($i);'>Elimina
                             <span class='popuptext' id='myPopup_$i'>
                                 <button class='card-link_2' style='font-weight: bold;'>Prenota tutti i posti: €$price_1</button>
                                 <button class='card-link_2' style='font-weight: bold;'>Prenota singolo: €$price_2</button>
@@ -93,7 +87,7 @@
                 if ($i%2==0) {
                     echo '</ul>';
                 }
-            }  
+            }   
         }
     ?>
     </body>
