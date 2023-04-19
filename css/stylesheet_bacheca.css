@@ -67,6 +67,7 @@ input {
 .container_form {
   padding: 2% 3%;
 }
+
 @media screen and (min-height: 700px) and (min-width: 1200px) and (max-height: 800px) and (max-width: 1300px) {
   .block {
     grid-template-rows: 100px;
@@ -87,11 +88,32 @@ input {
   }
 }
 
+@media screen and (min-height: 1000px) and (max-width: 900px) {
+  .block > img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-height: 850px) and (min-width: 900px) {
+  .coll {
+    grid-template-columns: 50%;
+  }
+  .center {
+    padding: 10px 10px;
+  }
+}
+
 /*MOBILE USERS*/
 @media screen and (max-width: 769px) {
   .block > img {
     width: 60px;
     height: 60px;
+  }
+  .gre {
+    position: absolute;
+    top: 34%;
+    left: 30%;
   }
   .container_full {
     position: fixed;
