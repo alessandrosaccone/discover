@@ -52,6 +52,7 @@
                 $price_1=$prezzo*$ore;
                 if ($persone!=0)
                     $price_2=($prezzo*$ore)/$persone;
+                echo "  <div class='con'>";
                 echo "  <li class='card'>
                         <div class='card_image'>
                             <img src='$img' />
@@ -68,22 +69,21 @@
                 echo " 
                             <h4 style='font-size: 15px'>Città: $citta <br/></h4>
                         </div>
-                        
                         <div class='card-languages'>
                             <h4>
                                 Lingua: <span style='font-weight: normal;'>$lingua</span> <br />
-                                Data e ora: <span style='font-weight: normal'>$data $ora</span>
+                                Data e ora: <span style='font-weight: normal'>$data <br> $ora</span>
                             </h4>
                         </div>
                         <div class='card-link-wrapper'>
-                            <a class='popup card-link' onclick='return funct($i);'>Elimina
-                            <span class='popuptext' id='myPopup_$i'>
-                                <button class='card-link_2' style='font-weight: bold;'>Prenota tutti i posti: €$price_1</button>
-                                <button class='card-link_2' style='font-weight: bold;'>Prenota singolo: €$price_2</button>
-                            </span>
+                            <a class='popup card-link_3'";
+                            echo 'onclick="return delete_s(';
+                            echo "'$title', '$nome', '$cognome', '$data', '$ora', '$lingua', '$citta');";
+                            echo '">Elimina
                             </a>
                         </div>
-                        </li>";
+                        </li>';
+                echo "  </div>";
                 if ($i%2==0) {
                     echo '</ul>';
                 }
