@@ -1,7 +1,3 @@
-/* ------------ GOOGLE FONTS ------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-/* ------------ VARIABLES ------------ */
 :root{
   /* FONT */
   --font: 'Poppins', sans-serif;
@@ -11,13 +7,11 @@
   --bg-color: #f4f4f4;
 }
 
-/* ------------ BASE ------------ */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 /* ----------- SLIDER ------------ */
 .swiper{
