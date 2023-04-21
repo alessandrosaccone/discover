@@ -56,3 +56,5 @@ insert into schede values('10/06/2023', '50', 'Lorem ipsum dolor sit amet, conse
 ','Spagnolo', 'Visita di Padova', 'Paolo', 'Paoli', 'Padova', '6', '19', '14:35');
 insert into schede values('21/07/2023', '55', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
 ','Francese', 'Goditi Napoli in tutto il suo splendore', 'Paolo', 'Manzi', 'Napoli', '4', '14', '09:45');
+
+insert into utente_guida values('Mario','Reda','marioreda81@gmail.com','1234','');
