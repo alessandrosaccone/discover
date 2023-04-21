@@ -23,7 +23,7 @@
     <div class="container-3">
         <div class="logreg-box">
             <div class="form-box login">
-              <form action="#">
+              <form action="registrazione.php" method="post">
                 <h2><b>Registrati</b></h2>
     
                 <div class="input-box">
@@ -34,25 +34,25 @@
 
                 <div class="input-box">
                     <span class="icon"><i class="bx bxs-envelope"></i></span>
-                    <input type="text" id="nome" name="nome" pattern="[A-Za-z]+" required>
+                    <input type="text" id="cognome" name="cognome" pattern="[A-Za-z]+" required>
                     <label for="nome"><b>Cognome</b></label>
                 </div>
     
                 <div class="input-box">
                     <span class="icon"><i class="bx bxs-envelope"></i></span>
-                    <input type="email" required />
+                    <input type="email" name="email" required />
                     <label><b>Email</b></label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" required />
+                    <input type="password" name="password" required />
                     <label><b>Password</b></label>
                 </div> 
                   
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="text" required />
+                    <input type="text" name="citta" required />
                     <label><b>Città</b></label>
                 </div> 
     

@@ -19,6 +19,13 @@ create table schede (
 	persone int,
 	time time
 );
+create table utente_guida(
+	nome varchar(255),
+	cognome varchar(255),
+	email varchar(255),
+	password varchar(255),
+	citta varchar(255)
+);
 
 insert into guida values('235', '3.5', '47', 'Paolo', 'Manzi', 'image/images/profile1.jpg');
 insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/profile3.jpg');
