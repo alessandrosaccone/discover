@@ -7,12 +7,13 @@
     <link rel="bootstrap" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/stylesheet_home.css" />
-    <script src="js/script_home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Homepage</title>
   </head>
   <body>
@@ -47,9 +48,10 @@
     </div>
     <div class="navheader" id="navbar">
       <nav class="navbar">
+        <a href="home.html">Home</a>
         <a href="app.html">Visite</a>
         <a href="guide.html">Guide</a>
-        <a href='login.html'>Login</a>
+        <a href="login.html" id="login_logout"></a>
         <a href="bacheca.html">Profilo</a>
       </nav>
     </div>
@@ -160,5 +162,10 @@
         </div>
       </div>
     </div>
+    <script>
+      $(window).on("load", function () {
+        $("#login_logout").load("logout.php");
+      });
+    </script>
   </body>
 </html>

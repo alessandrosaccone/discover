@@ -27,8 +27,9 @@
     <div class="navheader_general" id="navbar_app">
       <nav class="navbar">
         <a href="home.html" id="home">Home</a>
+        <a href="app.html">Visite</a>
         <a href="guide.html">Guide</a>
-        <a href="login.html">Login</a>
+        <a href="login.html" id="login_logout"></a>
         <a href="bacheca.html">Profilo</a>
       </nav>
     </div>
@@ -101,6 +102,12 @@
               return false;
             }
           });
+        });
+      </script>
+
+      <script>
+        $(window).on("load", function () {
+          $("#login_logout").load("logout.php");
         });
       </script>
     </div>
