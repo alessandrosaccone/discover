@@ -31,9 +31,24 @@
 
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
+              
+            while ($row = pg_fetch_array($result)) {
+              $nome=$row['nome'];
+              $cognome = $row['cognome'];
 
-            
-
+            echo '<div class="card swiper-slide">
+                    <div class="card__image">
+                      <img src="image/guida1.webp" alt="card image" />
+                    </div>
+  
+                    <div class="card__content">
+                      <span class="card__title"> $nome </span>
+                      <p class="card__text">Città: Roma</p>
+                      <p class="card__text">Lingue: Italiano, Inglese</p>
+                      <button class="card__btn">Profilo</button>
+                    </div>
+                  </div>';
+            }
         }
     ?>
   </body>
