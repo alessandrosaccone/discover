@@ -23,7 +23,8 @@
 
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
-              
+            echo '<section class="swiper mySwiper" id="zona">
+            <div class="swiper-wrapper">';
             while ($row = pg_fetch_array($result)) {
               $nome=$row['nome'];
               $cognome = $row['cognome'];
@@ -44,6 +45,8 @@
                     </div>
                   </div>";
             }
+            echo '</div>
+            </section>';
         }
     ?>
   </body>
