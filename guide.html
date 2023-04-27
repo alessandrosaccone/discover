@@ -28,6 +28,8 @@
         <a href="logout_trasizione.php" id="login_logout"></a>
         <a href="bacheca.html">Profilo</a>
       </nav>
+      <div id="benvenuto" class="benvenuto">
+      </div>
     </div>
 
     <section class="swiper mySwiper">
@@ -112,6 +114,11 @@
     <script>
       $(window).on("load", function () {
         $("#login_logout").load("logout.php");
+      });
+    </script>
+    <script>
+      $(window).on("load", function () {
+        $("#benvenuto").load("benvenuto.php");
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

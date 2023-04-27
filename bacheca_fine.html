@@ -32,6 +32,8 @@
           <a href="guide.html">Guide</a>
           <a href="login.html">Login</a>
         </nav>
+        <div id="benvenuto" class="benvenuto">
+        </div>
       </div>
       <!-- deleting the "home" from the navbar while using a mobile device -->
       <script>
@@ -251,6 +253,11 @@
     <script>
       $(window).on("load", function () {
         $("#3").load("bacheca.php");
+      });
+    </script>
+    <script>
+      $(window).on("load", function () {
+        $("#benvenuto").load("benvenuto.php");
       });
     </script>
     <script src="js/script_bacheca.js"></script>
