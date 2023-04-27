@@ -26,7 +26,7 @@
             $citta = strtolower($val_citta); 
             
             // Query per verificare se i dati sono presenti nel database
-            $sql = "SELECT * FROM utente_guida WHERE nome='$nome' AND cognome='$cognome' AND citta='$citta'";
+            $sql = "select * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
             $result = pg_query($dbconn, $sql);
 
             if ($result==false)
@@ -35,19 +35,22 @@
             while ($row = pg_fetch_array($result)) {
               $nome=$row['nome'];
               $cognome = $row['cognome'];
+              $citta = $row['citta']; 
+              $img = $row['image'];
+              $email = $row['email'];
 
-            echo '<div class="card swiper-slide">
-                    <div class="card__image">
-                      <img src="image/guida1.webp" alt="card image" />
+            echo "<div class='card swiper-slide'>
+                    <div class='card__image'>
+                      <img src='$img' alt='card image' />
                     </div>
   
-                    <div class="card__content">
-                      <span class="card__title"> $nome </span>
-                      <p class="card__text">Città: Roma</p>
-                      <p class="card__text">Lingue: Italiano, Inglese</p>
-                      <button class="card__btn">Profilo</button>
+                    <div class='card__content'>
+                      <span class='card__title'> $nome $cognome </span>
+                      <p class='card__text'>Città: $citta</p>
+                      <p class='card__text'>Email: $email, Inglese</p>
+                      <button class='card__btn'>Profilo</button>
                     </div>
-                  </div>';
+                  </div>";
             }
         }
     ?>
