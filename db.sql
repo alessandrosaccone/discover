@@ -58,3 +58,12 @@ insert into schede values('21/07/2023', '55', 'Lorem ipsum dolor sit amet, conse
 ','Francese', 'Goditi Napoli in tutto il suo splendore', 'Paolo', 'Manzi', 'Napoli', '4', '14', '09:45');
 
 insert into utente_guida values('Mario','Reda','marioreda81@gmail.com','1234','');
+
+insert into guida values('10', '5', '19', 'Mario', 'Reda', 'image/images/profile1.jpg');
+insert into utente_guida values('Mario', 'Reda', 'marioreda@gmail.com', 'pppp', 'Formia');
+insert into guida values('10', '5', '19', 'Mario', 'Meda', 'image/images/profile1.jpg');
+insert into utente_guida values('Mario', 'Meda', 'mariomeda@gmail.com', 'pppp', 'Formia');
+insert into guida values('10', '5', '19', 'Jario', 'Reda', 'image/images/profile1.jpg');
+insert into utente_guida values('Jario', 'Reda', 'jarioreda@gmail.com', 'pppp', 'Formia');
+insert into guida values('10', '5', '19', 'Mario', 'Reda', 'image/images/profile1.jpg');
+insert into utente_guida values('Jario', 'Meda', 'jariomeda@gmail.com', 'pppp', 'Formia');
