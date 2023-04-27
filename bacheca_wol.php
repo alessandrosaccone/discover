@@ -1,5 +1,7 @@
 <?php 
     session_start();
     if (!isset($_SESSION['username']))
-        http_response_code(1);
+        return 0;
+    else
+    http_response_code(404);
 ?>
