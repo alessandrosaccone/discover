@@ -40,7 +40,7 @@
                     <div class='card__content'>
                       <span class='card__title'> $nome $cognome </span>
                       <p class='card__text'>Città: $citta</p>
-                      <p class='card__text'>Email: $email, Inglese</p>
+                      <p class='card__text'>Email: $email</p>
                       <button class='card__btn'>Profilo</button>
                     </div>
                   </div>";
