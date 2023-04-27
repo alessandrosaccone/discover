@@ -65,5 +65,5 @@ insert into guida values('10', '5', '19', 'Mario', 'Meda', 'image/images/profile
 insert into utente_guida values('Mario', 'Meda', 'mariomeda@gmail.com', 'pppp', 'Formia');
 insert into guida values('10', '5', '19', 'Jario', 'Reda', 'image/images/profile1.jpg');
 insert into utente_guida values('Jario', 'Reda', 'jarioreda@gmail.com', 'pppp', 'Formia');
-insert into guida values('10', '5', '19', 'Mario', 'Reda', 'image/images/profile1.jpg');
+insert into guida values('10', '5', '19', 'Jario', 'Meda', 'image/images/profile1.jpg');
 insert into utente_guida values('Jario', 'Meda', 'jariomeda@gmail.com', 'pppp', 'Formia');
