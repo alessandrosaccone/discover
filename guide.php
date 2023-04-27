@@ -44,9 +44,12 @@
                       <button class='card__btn'>Profilo</button>
                     </div>
                   </div>";
-            }
+
+                }
             echo '</div>
             </section>';
         }
     ?>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script_guide.js"></script>
   </body>
