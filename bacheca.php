@@ -2,7 +2,7 @@
     require_once 'connect.php';
     session_start();
     $s_name=$_SESSION['username'];
-    $q1 = "select * from guida g where g.nome='$1'";
+    $q1 = "select * from guida g where g.nome=$1";
     $result = pg_query_params($dbconn, $q1, array($s_name));
     if ($result==false)
         die("Could not find any row" . pg_last_error());
