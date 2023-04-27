@@ -1,7 +1,9 @@
 <?php 
     require_once 'connect.php';
-    $q1 = "select * from guida g where g.nome='Sara'";
-    $result = pg_query($dbconn, $q1);
+    session_start();
+    $s_name=$_SESSION['username'];
+    $q1 = "select * from guida g where g.nome='$1'";
+    $result = pg_query_params($dbconn, $q1, array($s_name));
     if ($result==false)
         die("Could not find any row" . pg_last_error());
     $row = pg_fetch_array($result);
