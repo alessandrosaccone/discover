@@ -13,6 +13,8 @@
     $visits=$row['visits'];
     $nome=$row['nome'];
     $cognome=$row['cognome'];
+    if ($followers=='') $followers=0;
+    if ($visits=='') $visits=0;
     echo "<img src='$img'/>
           <div class='data'>
             <h4>Followers</h4>
