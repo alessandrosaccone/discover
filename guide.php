@@ -18,7 +18,7 @@
         require 'connect.php';
         if($dbconn){
             // Query per verificare se i dati sono presenti nel database
-            $sql = "select * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
+            $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
             $result = pg_query($dbconn, $sql);
 
             if ($result==false)
