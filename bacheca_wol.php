@@ -3,5 +3,5 @@
     if (!isset($_SESSION['username']))
         return 0;
     else
-    http_response_code(404);
+        http_response_code(404);
 ?>
