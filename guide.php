@@ -17,14 +17,6 @@
   <?php
         require 'connect.php';
         if($dbconn){
-            $val_nome = $_GET['nome'];
-            $val_cognome = $_GET['cognome'];
-            $val_citta = $_GET['citta'];
-
-            $nome = strtolower($val_nome);
-            $cognome = strtolower($val_cognome);
-            $citta = strtolower($val_citta); 
-            
             // Query per verificare se i dati sono presenti nel database
             $sql = "select * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
             $result = pg_query($dbconn, $sql);

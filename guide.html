@@ -32,9 +32,9 @@
       </div>
     </div>
 
-    <section class="swiper mySwiper">
+    <section class="swiper mySwiper" id="zona">
       <div class="swiper-wrapper">
-        <div class="card swiper-slide">
+        <!--<div class="card swiper-slide">
           <div class="card__image">
             <img src="image/guida1.webp" alt="card image" />
           </div>
@@ -84,7 +84,7 @@
             <p class="card__text">Lingue: Italiano, Inglese</p>
             <button class="card__btn">Profilo</button>
           </div>
-        </div>
+        </div>-->
       </div>
     </section>
 
@@ -117,6 +117,10 @@
       $(window).on("load", function () {
         $("#login_logout").load("logout.php");
       });
+    </script>
+    <script>$(window).on("load", function() {
+      $("#zona").load("guide.php");
+    });
     </script>
     <script>
       $(window).on("load", function () {
