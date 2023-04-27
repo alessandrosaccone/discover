@@ -33,8 +33,7 @@
           <a href="bacheca.html">Profilo</a>
           <a href="logout_trasizione.php" id="login_logout"></a>
         </nav>
-        <div id="benvenuto" class="benvenuto">
-        </div>
+        <div id="benvenuto" class="benvenuto"></div>
       </div>
       <!-- deleting the "home" from the navbar while using a mobile device -->
       <script>
@@ -44,7 +43,6 @@
       <div class="container">
         <div class="block" id="3"></div>
       </div>
-
       <br />
       <div class="coll">
         <div class="center">
@@ -255,6 +253,15 @@
     <br />
 
     <!--JQuery-->
+    <script>
+      $(window).on("load", function () {
+        $.ajax({
+          success: function (data) {
+            window.location = "login.html";
+          },
+        });
+      });
+    </script>
     <script>
       $(window).on("load", function () {
         $("#3").load("bacheca.php");
