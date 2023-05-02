@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login_piccolo.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+        </nav>
+    </header>
+    <div class="background"></div>
+
+    <div class="container"></div>
+
+    <div class="container-2"></div>
+
+    <div class="container-3">
+        <div class="logreg-box">
+            <div class="form-box login">
+              <form action="registrazione.php" method="post">
+                <h2>Accedi</h2>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" name="email" required />
+                    <label>Email</label>
+                  </div>
+      
+                  <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" name="password" required />
+                    <label>Password</label>
+                  </div>
+      
+                  <div class="remember-forgot">
+                    <label><input type="checkbox" />Ricordami</label>
+                    <a href="#">Password dimenticata?</a>
+                  </div>
+      
+                  <button type="submit" class="btn">Accedi</button>
+      
+                  <div class="login-register">
+                    <p>
+                      Non hai un account?
+                      <a href="#" class="register-link">Registrati</a>
+                    </p>
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
