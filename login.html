@@ -12,6 +12,28 @@
     <title>Login</title>
   </head>
   <body>
+    <script>
+      var a;
+      function myfunction() {
+        if (
+          navigator.userAgent.match(/webOS/i) ||
+          navigator.userAgent.match(/iPhone/i) ||
+          navigator.userAgent.match(/iPod/i) ||
+          navigator.userAgent.match(/BlackBerry/i) ||
+          navigator.userAgent.match(/Windows Phone/i) ||
+          screen.orientation.type("portrait-secondary")
+        ) {
+          a = true;
+          location.replace("login_piccolo.html");
+        } else {
+          a = false;
+        }
+        //alert(a);
+      }
+    </script>
+    <script>
+      myfunction();
+    </script>
     <header class="header">
       <nav class="navbar">
         <a href="home.html">Home</a>
@@ -23,12 +45,16 @@
         <h2 class="logo"><i class="bx bx-world"></i>Discover</h2>
 
         <div class="text-sci">
-          <h2><b>Benvenuto su Discover!</b><br /><span><b>Go wherever you want</b></span></h2>
+          <h2>
+            <b>Benvenuto su Discover!</b><br /><span
+              ><b>Go wherever you want</b></span
+            >
+          </h2>
         </div>
 
         <p>
           <b>
-            La prima applicazione al mondo che ti permette di visitare le più 
+            La prima applicazione al mondo che ti permette di visitare le più
             belle città in Italia e nel mondo con un semplice click
           </b>
         </p>
@@ -74,15 +100,31 @@
         </div>
         <div class="form-box register">
           <form action="#">
-            <div style="display: flex; justify-content: center; align-items: center; height: 300px;">
-              <img src="image/images/login.gif" style="max-height: 100%; max-width: 100%;">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 300px;
+              "
+            >
+              <img
+                src="image/images/login.gif"
+                style="max-height: 100%; max-width: 100%"
+              />
             </div>
-            
-            <br>
-            <br>
-            <br>
 
-            <button type="submit" class="btn"><a href="login_guide.html" style="color: black; text-decoration: none;">Registrati</a></button>
+            <br />
+            <br />
+            <br />
+
+            <button type="submit" class="btn">
+              <a
+                href="login_guide.html"
+                style="color: black; text-decoration: none"
+                >Registrati</a
+              >
+            </button>
 
             <div class="login-register">
               <p>
