@@ -28,12 +28,11 @@
         <a href="bacheca.html">Profilo</a>
         <a href="logout_trasizione.php" id="login_logout"></a>
       </nav>
-      <div id="benvenuto" class="benvenuto">
-      </div>
+      <div id="benvenuto" class="benvenuto"></div>
     </div>
     <div id="zona"></div>
-    
-        <!--<div class="card swiper-slide">
+
+    <!--<div class="card swiper-slide">
           <div class="card__image">
             <img src="image/guida1.webp" alt="card image" />
           </div>
@@ -84,7 +83,6 @@
             <button class="card__btn">Profilo</button>
           </div>
         </div>-->
-      
 
     <script>
       var a;
@@ -98,7 +96,7 @@
           screen.orientation.type("portrait-secondary")
         ) {
           a = true;
-          const home = document.getElementById("home");
+          const home = document.getElementById("head");
           home.remove();
           const search = document.getElementById("searchbar");
           search.remove();
@@ -116,9 +114,10 @@
         $("#login_logout").load("logout.php");
       });
     </script>
-    <script>$(window).on("load", function() {
-      $("#zona").load("guide.php");
-    });
+    <script>
+      $(window).on("load", function () {
+        $("#zona").load("guide.php");
+      });
     </script>
     <script>
       $(window).on("load", function () {
