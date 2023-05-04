@@ -19,12 +19,14 @@
     <?php
         require 'connect.php';
         if ($dbconn) {
-            if ($_POST['nome']=='' || $_POST['cognome']=='') {
-                echo "<h1> bro </h1>";
-                die ("error"); 
-            }
-            $n=$_POST['nome'];
-            $c=$_POST['cognome'];
+            session_start();
+            $n=$_SESSION['nome'];
+            $mail=$_SESSION['username'];
+
+            $q0 = 'select * from utente_guida where email=$1';
+            $result0 = pg_query_params($dbconn, $q0, array($mail));
+            $row0 = pg_fetch_array($result0);
+            $c=$row0['cognome'];
             //echo "<h1>$n $c </h1>";
             $q1 = 'select * from schede g join guida a on g.nome_guida=a.nome and g.cognome_guida=a.cognome where (g.nome_guida=$1 and g.cognome_guida=$2)';
             $result = pg_query_params($dbconn, $q1, array($n, $c));

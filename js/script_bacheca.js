@@ -14,10 +14,7 @@ function button_2() {
   document.getElementById("form").style.display = "none";
   document.getElementById("msg").style.display = "none";
   $("#view").on("click", function () {
-    $("#view_area").load("bacheca_schede.php", {
-      nome: "Sara",
-      cognome: "Manzi",
-    });
+    $("#view_area").load("bacheca_schede.php");
   });
 }
 

@@ -14,8 +14,8 @@
     $nome=$row['nome'];
     $cognome=$row['cognome'];
     if ($followers=='') $followers=0;
-    if ($visits=='') $visits=0;
-    if ($img=='') $img='image/images/profile_foto.webp';
+    if ($visits=='') $visits=0;  
+    if ($ratings='') $ratings='x';
     echo "<img src='$img'/>
           <div class='data'>
             <h4>Followers</h4>
