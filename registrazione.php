@@ -10,7 +10,7 @@
     $query = "INSERT INTO utente_guida (nome, cognome, email, password, citta) VALUES ('$nome', '$cognome', '$email', '$password', '$citta')";
     $result = pg_query($dbconn, $query);
 
-    $query = "INSERT INTO guida (nome, cognome, image) values ('$nome', '$cognome', '$img')";
+    $query = "INSERT INTO guida (nome, cognome, image, followers, rating, visits) values ('$nome', '$cognome', '$img', 0, 'x', 0)";
     $result = pg_query($dbconn, $query);
 
     header("Location: login.html");

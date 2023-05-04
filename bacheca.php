@@ -1,7 +1,7 @@
 <?php 
     require_once 'connect.php';
     session_start();
-    $s_name=$_SESSION['username'];
+    $s_name=$_SESSION['nome'];
     $q1 = "select * from guida g where g.nome=$1";
     $result = pg_query_params($dbconn, $q1, array($s_name));
     if ($result==false)
