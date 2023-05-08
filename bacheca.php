@@ -1,7 +1,7 @@
 <?php 
     require_once 'connect.php';
     session_start();
-    $s_name=$_SESSION['username'];
+    $s_name=$_SESSION['nome'];
     $q1 = "select * from guida g where g.nome=$1";
     $result = pg_query_params($dbconn, $q1, array($s_name));
     if ($result==false)
@@ -14,8 +14,8 @@
     $nome=$row['nome'];
     $cognome=$row['cognome'];
     if ($followers=='') $followers=0;
-    if ($visits=='') $visits=0;
-    if ($img=='') $img='image/images/profile_foto.webp';
+    if ($visits=='') $visits=0;  
+    if ($ratings='') $ratings='x';
     echo "<img src='$img'/>
           <div class='data'>
             <h4>Followers</h4>
