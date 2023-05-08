@@ -23,6 +23,7 @@
             $lan_i = $_GET['lingua']; 
             $val = strtolower($val_i);
             $lan = strtolower($lan_i);
+
             if (empty($val) && empty($lan)) {
                 $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";}
             else if (empty($lan) && !empty($val)) {
@@ -33,6 +34,7 @@
                 LIKE '%$lan%'";}
             else $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.title)
             LIKE '%$val%' or lower(s.citta) LIKE '%$val%') and lower(s.language) LIKE '%$lan%'";
+            
             $result = pg_query($dbconn, $q1);
             if ($result==false)
                 die("Could not find any row" . pg_last_error());

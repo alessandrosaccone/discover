@@ -17,14 +17,32 @@
   <?php
         require 'connect.php';
         if($dbconn){
-            // Query per verificare se i dati sono presenti nel database
-            $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
+            $nome_i = $_GET['']; #completa
+            $citta_i = $_GET['']; #completa
+            $nome = strtolower($nome_i);
+            $citta = strtolower($citta_i);
+
+            #questa resta per ora
+            #$sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
+
+            #query
+            if (empty($nome) && empty($citta)) {
+              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";}
+            else if (empty($nome) && !empty($citta)) {
+              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome where LOWER(ug.citta) LIKE '%$nome%'";}
+            else if (!empty($nome) && empty($citta)) {    
+              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome where LOWER(g.title) LIKE '%$val%'";}
+            else
+              $sql = "select distinct * from guida g join utente_guida u on g.email = u.email where (LOWER(s.title) LIKE '%$nome%' OR LOWER(u.citta) LIKE '%$nome%') AND LOWER(g.language) LIKE '%$citta%'";
+
             $result = pg_query($dbconn, $sql);
 
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
+
             echo '<section class="swiper mySwiper" id="zona">
-            <div class="swiper-wrapper">';
+                  <div class="swiper-wrapper">';
+
             while ($row = pg_fetch_array($result)) {
               $nome=$row['nome'];
               $cognome = $row['cognome'];

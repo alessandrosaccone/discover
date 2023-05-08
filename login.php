@@ -19,4 +19,11 @@
     } else {
         header("Location: login.html");
     }
+
+    // Verifica le credenziali
+    if ($email === 'email' && $password === 'password') {
+        echo 'success';
+        } else {
+        echo 'cacca';
+        }
 ?>
