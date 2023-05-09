@@ -1,11 +1,23 @@
+/*FROM HERE*/
 create table guida (
 	followers int,
 	rating int,
 	visits int,
 	nome varchar,
 	cognome varchar,
-	image varchar
+	image varchar,
+	email varchar(255),
+	password varchar(255),
+	citta varchar(255)
 );
+insert into guida values('235', '3', '47', 'Paolo', 'Manzi', 'image/images/profile1.jpg', 'paolomanzi@gmail.com', '1234', 'Roma');
+insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/profile3.jpg', 'marcomarconi21@gmail.com', 'pass', 'Roma');
+insert into guida values('23', '4', '20', 'Sara', 'Manzi', 'image/images/profile5.jpg', 'saramanzi@gmail.com', '1111', 'Napoli');
+insert into guida values('112', '5', '100', 'Paolo', 'Paoli', 'image/images/profile9.jpg', 'paolopaoli@gmail.com', '1234', 'Roma');
+insert into guida values('0', '0', '0', 'Mario', 'Reda', '', 'marioreda81@gmail.com','1234','');
+
+/*TO HERE*/
+
 create table schede (
 	date date,
 	price int,
@@ -19,18 +31,7 @@ create table schede (
 	persone int,
 	time time
 );
-create table utente_guida(
-	nome varchar(255),
-	cognome varchar(255),
-	email varchar(255),
-	password varchar(255),
-	citta varchar(255)
-);
 
-insert into guida values('235', '3.5', '47', 'Paolo', 'Manzi', 'image/images/profile1.jpg');
-insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/profile3.jpg');
-insert into guida values('23', '4', '20', 'Sara', 'Manzi', 'image/images/profile5.jpg');
-insert into guida values('112', '5', '100', 'Paolo', 'Paoli', 'image/images/profile9.jpg');
 insert into schede values('10/06/2023', '60', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
 ','Italiano', 'Alla scoperta dei Fori Romani', 'Paolo', 'Paoli', 'Roma', '3', '12', '10:55');
 insert into schede values('15/06/2023', '65', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
