@@ -25,24 +25,21 @@
 
             #query
             if (empty($nome) && empty($citta)) {
-              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";}
+              $sql = "select distinct * from utente_guida";}
             else if (!empty($nome) && empty($citta)) {
               $sql = "select distinct *
-                      from guida g
-                      inner join utente_guida ug on g.nome = ug.nome and g.cognome = ug.cognome
-                      where lower(g.nome) LIKE '%$nome%' OR lower(ug.nome) LIKE '%$nome%'
+                      from utente_guida ug
+                      where lower(ug.nome) LIKE '%$nome%'
                       ";}
             else if (empty($nome) && !empty($citta)) {    
               $sql = "SELECT distinct *
-                      FROM guida g
-                      INNER JOIN utente_guida ug ON g.nome = ug.nome AND g.cognome = ug.cognome
+                      FROM utente_guida ug
                       WHERE lower(ug.citta) LIKE '%$citta%'
                       ";}
             else
               $sql = "SELECT distinct *
-                      FROM guida g
-                      INNER JOIN utente_guida ug ON g.nome = ug.nome AND g.cognome = ug.cognome
-                      WHERE (lower(g.nome) LIKE '%$nome%' OR lower(ug.nome) LIKE '%$nome%')
+                      FROM utente_guida ug
+                      WHERE (lower(ug.nome) LIKE '%$nome%')
                       AND lower(ug.citta) LIKE '%$citta%'
                       ";
 
@@ -58,7 +55,7 @@
               $nome=$row['nome'];
               $cognome = $row['cognome'];
               $citta = $row['citta']; 
-              $img = $row['image'];
+              $img = $row['img'];
               $email = $row['email'];
 
             echo "<div class='card swiper-slide'>

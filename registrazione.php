@@ -7,10 +7,10 @@
     $citta = $_POST['citta'];
     $img='image/images/profile_foto.webp';   
 
-    $query = "INSERT INTO utente_guida (nome, cognome, email, password, citta) VALUES ('$nome', '$cognome', '$email', '$password', '$citta')";
+    $query = "INSERT INTO utente_guida (nome, cognome, email, password, citta, img) VALUES ('$nome', '$cognome', '$email', '$password', '$citta', '$img')";
     $result = pg_query($dbconn, $query);
 
-    $query = "INSERT INTO guida (nome, cognome, image, followers, rating, visits) values ('$nome', '$cognome', '$img', 0, 'x', 0)";
+    $query = "INSERT INTO guida (nome, cognome, image, followers, rating, visits) VALUES ('$nome', '$cognome', '$img', 0, 'x', 0)";
     $result = pg_query($dbconn, $query);
 
     header("Location: login.html");
