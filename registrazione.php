@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
     $citta = $_POST['citta'];
-    $img='image/images/profile_foto.webp';   
+    $img='image/images/profile1.jpg';   
 
     $query = "INSERT INTO utente_guida (nome, cognome, email, password, citta, img) VALUES ('$nome', '$cognome', '$email', '$password', '$citta', '$img')";
     $result = pg_query($dbconn, $query);
