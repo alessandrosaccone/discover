@@ -97,7 +97,7 @@
 @media screen and (max-height: 844px) {
   .card{
     width: 20em;
-    height: 80%;
+    height: 70%;
     background-color: #fff;
     border-radius: 2em;
     box-shadow: 0 0 2em rgba(0, 0, 0, .2);
@@ -106,8 +106,68 @@
     align-items: center;
     flex-direction: column;
     margin: 0 2em;
-    top: 30px;
+    top: 60px;
   }  
+
+  .search_container {
+    position: absolute;
+    width: 100%;
+    padding: 0 0;
+    top: 9.5%;
+    align-items: center;
+    float: center;
+  }
+
+  .search_container {
+    position: absolute;
+    width: 100%;
+    padding: 0 0;
+    top: 9.5%;
+    align-items: center;
+    float: center;
+    margin-left: 10px;
+  }
+
+  .search-bar_center {
+    width: 95%;
+    height: 45px;
+    background: #0a586e1a;
+    border: 2px solid #ffffffbd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar_center input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #1918188f;
+    padding-left: 10px;
+  }
+
+  .search-bar_center input::placeholder {
+    color: #000000;
+  }
+
+  .search-bar_center button {
+    width: 60px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .search-bar_center button i {
+    font-size: 22px;
+    color: black;
+  }
 
   .delete{
     display: none;

@@ -37,12 +37,12 @@
         <form method="POST" action="" id="myform">
           <div class="search-bar_center">
             <input
-              id="search"
+              id="cerca"
               type="text"
-              name="search"
+              name="nome"
               placeholder="Nome..."
             />
-            <input type="text" name="lingua" placeholder="Città..." />
+            <input id = "cercacitta" type="text" name="citta" placeholder="Città..." />
           </div>
         </form>
       </div>
@@ -126,11 +126,12 @@
 
     <!--JQuery-->
     <script>
-      var string = "";
+      /* var string = "";
       $("#search").on("keydown", function () {
         $("#zonaDinamica").load("guide.php", $("#myform").serialize());
-      });
+      }); */
     </script>
+
     <script>
       myfunction();
     </script>
@@ -142,6 +143,12 @@
     <script>
       $(window).on("load", function () {
         $("#zona").load("guide.php");
+        $("#cerca").on("input", function () {
+          $("#zona").load("guide.php", $("#myform").serialize());
+        });
+        $("#cercacitta").on("input", function () {
+          $("#zona").load("guide.php", $("#myform").serialize());
+        });
       });
     </script>
     <script>

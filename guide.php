@@ -11,29 +11,40 @@
     <link rel="stylesheet" href="css/guide.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/script_responsiveness.js"></script>
     <title>Guide</title>
   </head>
   <body>
   <?php
         require 'connect.php';
         if($dbconn){
-            $nome_i = $_GET['']; #completa
-            $citta_i = $_GET['']; #completa
+            $nome_i = $_GET['nome'];
+            $citta_i = $_GET['citta'];;
             $nome = strtolower($nome_i);
             $citta = strtolower($citta_i);
-
-            #questa resta per ora
-            #$sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";
 
             #query
             if (empty($nome) && empty($citta)) {
               $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome";}
-            else if (empty($nome) && !empty($citta)) {
-              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome where LOWER(ug.citta) LIKE '%$nome%'";}
-            else if (!empty($nome) && empty($citta)) {    
-              $sql = "select distinct * from guida g join utente_guida ug on g.nome=ug.nome and g.cognome=ug.cognome where LOWER(g.title) LIKE '%$val%'";}
+            else if (!empty($nome) && empty($citta)) {
+              $sql = "select distinct *
+                      from guida g
+                      inner join utente_guida ug on g.nome = ug.nome and g.cognome = ug.cognome
+                      where lower(g.nome) LIKE '%$nome%' OR lower(ug.nome) LIKE '%$nome%'
+                      ";}
+            else if (empty($nome) && !empty($citta)) {    
+              $sql = "SELECT distinct *
+                      FROM guida g
+                      INNER JOIN utente_guida ug ON g.nome = ug.nome AND g.cognome = ug.cognome
+                      WHERE lower(ug.citta) LIKE '%$citta%'
+                      ";}
             else
-              $sql = "select distinct * from guida g join utente_guida u on g.email = u.email where (LOWER(s.title) LIKE '%$nome%' OR LOWER(u.citta) LIKE '%$nome%') AND LOWER(g.language) LIKE '%$citta%'";
+              $sql = "SELECT distinct *
+                      FROM guida g
+                      INNER JOIN utente_guida ug ON g.nome = ug.nome AND g.cognome = ug.cognome
+                      WHERE (lower(g.nome) LIKE '%$nome%' OR lower(ug.nome) LIKE '%$nome%')
+                      AND lower(ug.citta) LIKE '%$citta%'
+                      ";
 
             $result = pg_query($dbconn, $sql);
 
