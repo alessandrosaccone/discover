@@ -23,7 +23,7 @@
             $n=$_SESSION['nome'];
             $mail=$_SESSION['username'];
 
-            $q0 = 'select * from utente_guida where email=$1';
+            $q0 = 'select * from guida where email=$1';
             $result0 = pg_query_params($dbconn, $q0, array($mail));
             $row0 = pg_fetch_array($result0);
             $c=$row0['cognome'];
