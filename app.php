@@ -25,14 +25,14 @@
             $lan = strtolower($lan_i);
 
             if (empty($val) && empty($lan)) {
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";}
+                $q1 = "select distinct * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome";}
             else if (empty($lan) && !empty($val)) {
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.title)
+                $q1 = "select distinct * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.title)
                 LIKE '%$val%' or lower(s.citta) LIKE '%$val%'";}
             else if (!empty($lan) && empty($val)) {    
-                $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.language) 
+                $q1 = "select distinct * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where lower(s.language) 
                 LIKE '%$lan%'";}
-            else $q1 = "select * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.title)
+            else $q1 = "select distinct * from guida g join schede s on s.nome_guida=g.nome and s.cognome_guida=g.cognome where (lower(s.title)
             LIKE '%$val%' or lower(s.citta) LIKE '%$val%') and lower(s.language) LIKE '%$lan%'";
             
             $result = pg_query($dbconn, $q1);
