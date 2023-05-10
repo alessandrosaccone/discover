@@ -25,20 +25,20 @@
 
             #query
             if (empty($nome) && empty($citta)) {
-              $sql = "select distinct * from utente_guida";}
+              $sql = "select distinct * from guida";}
             else if (!empty($nome) && empty($citta)) {
               $sql = "select distinct *
-                      from utente_guida ug
+                      from guida ug
                       where lower(ug.nome) LIKE '%$nome%'
                       ";}
             else if (empty($nome) && !empty($citta)) {    
               $sql = "SELECT distinct *
-                      FROM utente_guida ug
+                      FROM guida ug
                       WHERE lower(ug.citta) LIKE '%$citta%'
                       ";}
             else
               $sql = "SELECT distinct *
-                      FROM utente_guida ug
+                      FROM guida ug
                       WHERE (lower(ug.nome) LIKE '%$nome%')
                       AND lower(ug.citta) LIKE '%$citta%'
                       ";

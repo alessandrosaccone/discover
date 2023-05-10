@@ -1,17 +1,21 @@
 <?php
     include "connect.php";
+    $followers = $_POST['followers'];
+    $rating = $_POST['rating'];
+    $visits = $_POST['visits'];
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $citta = $_POST['citta'];
-    $img='image/images/profile1.jpg';   
+    $image='image/images/profile1.jpg';   
 
-    $query = "INSERT INTO utente_guida (nome, cognome, email, password, citta, img) VALUES ('$nome', '$cognome', '$email', '$password', '$citta', '$img')";
-    $result = pg_query($dbconn, $query);
-
-    $query = "INSERT INTO guida (nome, cognome, image, followers, rating, visits) VALUES ('$nome', '$cognome', '$img', 0, 'x', 0)";
-    $result = pg_query($dbconn, $query);
+    $query = "INSERT INTO guida (followers, rating, visits, nome, cognome, image, email, password, citta) VALUES (0, 'x', 0, '$nome', '$cognome', '$image', '$email', '$password', '$citta')";
+    
+    if($result = pg_query($dbconn, $query)){}
+    else{
+        echo'$result = pg_query($dbconn, $query))';
+    }
 
     header("Location: login.html");
 ?>
