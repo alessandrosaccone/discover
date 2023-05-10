@@ -10,12 +10,8 @@
     $citta = $_POST['citta'];
     $image='image/images/profile1.jpg';   
 
-    $query = "INSERT INTO guida (followers, rating, visits, nome, cognome, image, email, password, citta) VALUES (0, 'x', 0, '$nome', '$cognome', '$image', '$email', '$password', '$citta')";
-    
-    if($result = pg_query($dbconn, $query)){}
-    else{
-        echo'$result = pg_query($dbconn, $query))';
-    }
+    $query = "INSERT INTO guida (followers, rating, visits, nome, cognome, image, email, password, citta) VALUES (0, 0, 0, '$nome', '$cognome', '$image', '$email', '$password', '$citta')";
+    $result = pg_query($dbconn, $query);
 
     header("Location: login.html");
 ?>

@@ -55,7 +55,7 @@
               $nome=$row['nome'];
               $cognome = $row['cognome'];
               $citta = $row['citta']; 
-              $img = $row['img'];
+              $img = $row['image'];
               $email = $row['email'];
 
             echo "<div class='card swiper-slide'>
