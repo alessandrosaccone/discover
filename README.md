@@ -18,9 +18,6 @@
 /*TABLET USERS*/
 @media screen and (max-width: 850px) and (min-width: 769px) {}
 
-per login funziona tutto
-registrazioni mi da problemi il fold
-guide !!
 
 
 
