@@ -19,7 +19,7 @@
         require 'connect.php';
         if($dbconn){
             $nome_i = $_GET['nome'];
-            $citta_i = $_GET['citta'];;
+            $citta_i = $_GET['citta'];
             $nome = strtolower($nome_i);
             $citta = strtolower($citta_i);
 
@@ -47,10 +47,10 @@
 
             if ($result==false)
                 die("Could not find any row" . pg_last_error());
-
+            
             echo '<section class="swiper mySwiper" id="zona">
                   <div class="swiper-wrapper">';
-
+            
             while ($row = pg_fetch_array($result)) {
               $nome=$row['nome'];
               $cognome = $row['cognome'];
