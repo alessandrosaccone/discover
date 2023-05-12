@@ -650,7 +650,7 @@
   }
 }
 
-@media screen and (min-width: 1270px) {
+/* @media screen and (max-width: 1270px) {
 
   .swiper{
     width: 100%;
@@ -691,7 +691,7 @@
   .delete{
     display: none;
   }
-}
+} */
 
 @media screen and (max-width: 1030px) {
   .swiper{
