@@ -307,3 +307,18 @@ body {
 .login-register p a:hover {
   text-decoration: underline;
 }
+
+.alert_login{
+  width: 370px;
+  height: 60px;
+  background-color: rgba(255, 111, 0, 0.236); /* sfondo rosso trasparente */
+  border: 2px solid orange; /* bordi rossi di spessore 2px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-top: -50px; /* metà dell'altezza del quadrato */
+  margin-left: -50px; /* metà della larghezza del quadrato */
+}

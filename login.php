@@ -17,6 +17,6 @@
         $_SESSION['nome'] = $tuple["nome"];
         header("Location: home.html");
     } else {
-        header("Location: login.html");
+        header("Location: login_error.html");
     }
 ?>
