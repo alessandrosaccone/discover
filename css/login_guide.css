@@ -659,3 +659,20 @@ body {
         box-shadow: 0 0 10px rgb(255, 255, 255)
     }
 }
+
+.input-box .icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 25px;
+}
+.social-icons a i {
+    font-size: 22px;
+    color: #e4e4e4;
+    margin-right: 10px;
+    transition: 0.5s ease;
+  }
+  
+  .social-icons a:hover i {
+    transform: scale(1.2);
+  }
