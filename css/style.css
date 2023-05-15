@@ -247,3 +247,9 @@
   color: #000000;
   font-size: x-large;
 }
+
+@media screen and (min-height: 930px) {
+  .benvenuto{
+    display: none;
+  }
+}
