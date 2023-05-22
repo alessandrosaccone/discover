@@ -35,7 +35,7 @@ create table schede (
 insert into schede values('10/06/2023', '60', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
 ','Italiano', 'Alla scoperta dei Fori Romani', 'Paolo', 'Paoli', 'Roma', '3', '12', '10:55');
 insert into schede values('15/06/2023', '65', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
-','Italiano', 'Alla scoperta dei Fori Romani', 'Marco', 'Manzi', 'Roma', '3', '12', '10:55');
+','Italiano', 'Alla scoperta dei Fori Imperiali', 'Marco', 'Manzi', 'Roma', '3', '12', '10:55');
 insert into guida values('11', '4', '12', 'Paolo', 'Manzi', 'image/images/profile2.jpg');
 insert into schede values('19/07/2023', '60', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
 ','Italiano', 'Alla scoperta del Colosseo', 'Paolo', 'Paoli', 'Roma', '2', '16', '16:55');
