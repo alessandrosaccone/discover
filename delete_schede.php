@@ -3,13 +3,12 @@
     $nome=$_POST['nome_p'];
     $cognome=$_POST['cognome_p'];
     $titolo=$_POST['title_p'];
-    $citta=$_POST['citta_p'];
     $data=$_POST['data_p'];
-    $ora=$_POST['ora_p'];
     $lingua=$_POST['lingua_p'];
-    $q1 = "delete from schede where nome_guida=$1 and cognome_guida=$2 and title=$3 and citta=$4 and date=$5 and 
-    language=$6 and time=$7";
-    $result = pg_query_params($dbconn, $q1, array($nome, $cognome, $titolo, $citta, $data, $lingua, $ora));
+    $logMessage = "$nome $cognome $titolo $citta $data $lingua";
+    error_log($logMessage);
+    $q1 = "DELETE FROM schede WHERE nome_guida = $1 AND cognome_guida = $2 AND title = $3 AND date = $4 AND language = $5";
+    $result = pg_query_params($dbconn, $q1, array($nome, $cognome, $titolo, $data, $lingua));
     if (!$result)
         die("errore");
 ?>

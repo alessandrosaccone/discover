@@ -80,7 +80,7 @@
                         <div class='card-link-wrapper'>
                             <a class='popup card-link_3'";
                             echo 'onclick="return delete_s(';
-                            echo "'$title', '$nome', '$cognome', '$data', '$ora', '$lingua', '$citta');";
+                            echo "'$title', '$nome', '$cognome', '$data', '$lingua');";
                             echo '">Elimina
                             </a>
                         </div>
