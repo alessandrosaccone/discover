@@ -1,4 +1,3 @@
-/*FROM HERE*/
 create table guida (
 	followers int,
 	rating int,
@@ -15,8 +14,8 @@ insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/prof
 insert into guida values('23', '4', '20', 'Sara', 'Manzi', 'image/images/profile5.jpg', 'saramanzi@gmail.com', '1111', 'Napoli');
 insert into guida values('112', '5', '100', 'Paolo', 'Paoli', 'image/images/profile9.jpg', 'paolopaoli@gmail.com', '1234', 'Roma');
 insert into guida values('0', '0', '0', 'Mario', 'Reda', '', 'marioreda81@gmail.com','1234','');
+insert into guida values('100', '4', '11', 'Alessandro', 'Saccone', 'image/images/profile1.jpg', 'alesacco@gmail.com', 'aaaaaa', 'Formia');
 
-/*TO HERE*/
 
 create table schede (
 	date date,
@@ -58,12 +57,3 @@ insert into schede values('10/06/2023', '50', 'Lorem ipsum dolor sit amet, conse
 insert into schede values('21/07/2023', '55', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit mi. Vivamus pulvinar efficitur turpis, a facilisis dolor euismod nec. Nulla lobortis et velit et molestie. Nulla sapien ligula, consectetur at pretium et, volutpat in lectus. Cras imperdiet velit hendrerit mi blandit, sit amet vulputate neque feugiat. Suspendisse dignissim eget turpis id posuere.
 ','Francese', 'Goditi Napoli in tutto il suo splendore', 'Paolo', 'Manzi', 'Napoli', '4', '14', '09:45');
 
-insert into utente_guida values('Mario','Reda','marioreda81@gmail.com','1234','');
-insert into guida values('10', '5', '19', 'Mario', 'Reda', 'image/images/profile1.jpg');
-insert into utente_guida values('Mario', 'Reda', 'marioreda@gmail.com', 'pppp', 'Formia');
-insert into guida values('10', '5', '19', 'Mario', 'Meda', 'image/images/profile1.jpg');
-insert into utente_guida values('Mario', 'Meda', 'mariomeda@gmail.com', 'pppp', 'Formia');
-insert into guida values('10', '5', '19', 'Jario', 'Reda', 'image/images/profile1.jpg');
-insert into utente_guida values('Jario', 'Reda', 'jarioreda@gmail.com', 'pppp', 'Formia');
-insert into guida values('10', '5', '19', 'Jario', 'Meda', 'image/images/profile1.jpg');
-insert into utente_guida values('Jario', 'Meda', 'jariomeda@gmail.com', 'pppp', 'Formia');
