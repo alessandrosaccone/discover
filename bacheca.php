@@ -15,7 +15,7 @@
     $cognome=$row['cognome'];
     if ($followers=='') $followers=0;
     if ($visits=='') $visits=0;  
-    if ($ratings='') $ratings='x';
+    //if ($ratings='') $ratings='x';
     echo "<img src='$img'/>
           <div class='data'>
             <h4>Followers</h4>
