@@ -13,7 +13,7 @@ insert into guida values('235', '3', '47', 'Paolo', 'Manzi', 'image/images/profi
 insert into guida values('11', '3', '15', 'Marco', 'Marconi', 'image/images/profile3.jpg', 'marcomarconi21@gmail.com', 'pass', 'Roma');
 insert into guida values('23', '4', '20', 'Sara', 'Manzi', 'image/images/profile5.jpg', 'saramanzi@gmail.com', '1111', 'Napoli');
 insert into guida values('112', '5', '100', 'Paolo', 'Paoli', 'image/images/profile9.jpg', 'paolopaoli@gmail.com', '1234', 'Roma');
-insert into guida values('0', '0', '0', 'Mario', 'Reda', '', 'marioreda81@gmail.com','1234','');
+insert into guida values('0', '0', '0', 'Mario', 'Reda', 'image/images/profile3.jpg', 'marioreda81@gmail.com','1234','');
 insert into guida values('100', '4', '11', 'Alessandro', 'Saccone', 'image/images/profile1.jpg', 'alesacco@gmail.com', 'aaaaaa', 'Formia');
 
 
